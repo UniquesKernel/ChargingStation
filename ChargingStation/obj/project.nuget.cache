@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hj3ZXKIyLlkf/xMxklHKQkihAYIsckgPjimGBfkWjsG7oOKEBhHFE33YbovdHjZp3C1JO9jUi78c3D5EOerXtw==",
+  "dgSpecHash": "rGWJ5ngYqpQjxzTkmouXcvb4v+JBtgVY2OUZGr+LOon4hciGM+XjVP0qDBAJdWziM9R+bzmXB9GcxSwoj3q2Nw==",
   "success": true,
-  "projectFilePath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStation\\ChargingStation.csproj",
+  "projectFilePath": "/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/ChargingStation.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\UniquesKernel\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512"
+    "/home/morten/.nuget/packages/microsoft.codecoverage/17.1.0/microsoft.codecoverage.17.1.0.nupkg.sha512"
   ],
   "logs": []
 }

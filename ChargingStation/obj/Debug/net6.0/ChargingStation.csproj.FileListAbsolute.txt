@@ -1,0 +1,17 @@
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/bin/Debug/net6.0/ChargingStation
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/bin/Debug/net6.0/ChargingStation.deps.json
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/bin/Debug/net6.0/ChargingStation.runtimeconfig.json
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/bin/Debug/net6.0/ChargingStation.dll
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/bin/Debug/net6.0/ref/ChargingStation.dll
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/bin/Debug/net6.0/ChargingStation.pdb
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/bin/Debug/net6.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/obj/Debug/net6.0/ChargingStation.csproj.AssemblyReference.cache
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/obj/Debug/net6.0/ChargingStation.GeneratedMSBuildEditorConfig.editorconfig
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/obj/Debug/net6.0/ChargingStation.AssemblyInfoInputs.cache
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/obj/Debug/net6.0/ChargingStation.AssemblyInfo.cs
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/obj/Debug/net6.0/ChargingStation.csproj.CoreCompileInputs.cache
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/obj/Debug/net6.0/ChargingStation.csproj.CopyComplete
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/obj/Debug/net6.0/ChargingStation.dll
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/obj/Debug/net6.0/ref/ChargingStation.dll
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/obj/Debug/net6.0/ChargingStation.pdb
+/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/obj/Debug/net6.0/ChargingStation.genruntimeconfig.cache
