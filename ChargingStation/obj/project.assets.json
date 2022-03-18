@@ -14,6 +14,12 @@
           "build/netstandard1.0/Microsoft.CodeCoverage.props": {},
           "build/netstandard1.0/Microsoft.CodeCoverage.targets": {}
         }
+      },
+      "NunitXml.TestLogger/3.0.117": {
+        "type": "package",
+        "build": {
+          "build/netstandard1.0/NUnitXml.TestLogger.props": {}
+        }
       }
     }
   },
@@ -86,32 +92,57 @@
         "microsoft.codecoverage.17.1.0.nupkg.sha512",
         "microsoft.codecoverage.nuspec"
       ]
+    },
+    "NunitXml.TestLogger/3.0.117": {
+      "sha512": "+AEoIB71gu6R2QXzAs68MLlceLgo0T9hcL8yWGUi+UzozsDMIjHGKhqDqgCFwtO8UcXAJBaFNkK9o0gtFaLTSw==",
+      "type": "package",
+      "path": "nunitxml.testlogger/3.0.117",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/_common/Microsoft.VisualStudio.TestPlatform.Extension.NUnit.Xml.TestAdapter.dll",
+        "build/_common/Microsoft.VisualStudio.TestPlatform.Extension.NUnit.Xml.TestLogger.dll",
+        "build/_common/Spekt.TestLogger.dll",
+        "build/net45/NUnitXml.TestLogger.props",
+        "build/netstandard1.0/NUnitXml.TestLogger.props",
+        "nunitxml.testlogger.3.0.117.nupkg.sha512",
+        "nunitxml.testlogger.nuspec",
+        "packageIcon.png"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Microsoft.CodeCoverage >= 17.1.0"
+      "Microsoft.CodeCoverage >= 17.1.0",
+      "NunitXml.TestLogger >= 3.0.117"
     ]
   },
   "packageFolders": {
-    "/home/morten/.nuget/packages/": {}
+    "C:\\Users\\UniquesKernel\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/ChargingStation.csproj",
+      "projectUniqueName": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStation\\ChargingStation.csproj",
       "projectName": "ChargingStation",
-      "projectPath": "/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/ChargingStation.csproj",
-      "packagesPath": "/home/morten/.nuget/packages/",
-      "outputPath": "/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/obj/",
+      "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStation\\ChargingStation.csproj",
+      "packagesPath": "C:\\Users\\UniquesKernel\\.nuget\\packages\\",
+      "outputPath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStation\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/morten/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\UniquesKernel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -133,6 +164,10 @@
           "Microsoft.CodeCoverage": {
             "target": "Package",
             "version": "[17.1.0, )"
+          },
+          "NunitXml.TestLogger": {
+            "target": "Package",
+            "version": "[3.0.117, )"
           }
         },
         "imports": [
@@ -150,7 +185,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

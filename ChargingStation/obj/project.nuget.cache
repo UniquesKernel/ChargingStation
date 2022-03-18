@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "rGWJ5ngYqpQjxzTkmouXcvb4v+JBtgVY2OUZGr+LOon4hciGM+XjVP0qDBAJdWziM9R+bzmXB9GcxSwoj3q2Nw==",
+  "dgSpecHash": "6+/rsGPAN7V/lP3mxfKV7uys/MQvFg1VGS9WEzd/2o8j2+uJTCSNmyl+XbeF2gGcIb/H2rPnisSQog7dZIAv2A==",
   "success": true,
-  "projectFilePath": "/home/morten/Documents/University/Software-Test/ChargingStation/ChargingStation/ChargingStation.csproj",
+  "projectFilePath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStation\\ChargingStation.csproj",
   "expectedPackageFiles": [
-    "/home/morten/.nuget/packages/microsoft.codecoverage/17.1.0/microsoft.codecoverage.17.1.0.nupkg.sha512"
+    "C:\\Users\\UniquesKernel\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
+    "C:\\Users\\UniquesKernel\\.nuget\\packages\\nunitxml.testlogger\\3.0.117\\nunitxml.testlogger.3.0.117.nupkg.sha512"
   ],
   "logs": []
 }
