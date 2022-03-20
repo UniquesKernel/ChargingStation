@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ChargingStation\ChargingStation.csproj" />
+    <ProjectReference Include="..\ChargingStationLibrary\ChargingStationLibrary.csproj" />
   </ItemGroup>
 
 </Project>

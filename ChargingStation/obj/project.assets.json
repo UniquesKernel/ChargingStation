@@ -20,6 +20,16 @@
         "build": {
           "build/netstandard1.0/NUnitXml.TestLogger.props": {}
         }
+      },
+      "ChargingStationLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ChargingStationLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ChargingStationLibrary.dll": {}
+        }
       }
     }
   },
@@ -109,10 +119,16 @@
         "nunitxml.testlogger.nuspec",
         "packageIcon.png"
       ]
+    },
+    "ChargingStationLibrary/1.0.0": {
+      "type": "project",
+      "path": "../ChargingStationLibrary/ChargingStationLibrary.csproj",
+      "msbuildProject": "../ChargingStationLibrary/ChargingStationLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "ChargingStationLibrary >= 1.0.0",
       "Microsoft.CodeCoverage >= 17.1.0",
       "NunitXml.TestLogger >= 3.0.117"
     ]
@@ -148,7 +164,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj": {
+              "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -889,18 +889,14 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "ChargingStation/1.0.0": {
+      "ChargingStationLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Microsoft.CodeCoverage": "17.1.0",
-          "NunitXml.TestLogger": "3.0.117"
-        },
         "compile": {
-          "bin/placeholder/ChargingStation.dll": {}
+          "bin/placeholder/ChargingStationLibrary.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ChargingStation.dll": {}
+          "bin/placeholder/ChargingStationLibrary.dll": {}
         }
       }
     }
@@ -3885,15 +3881,15 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "ChargingStation/1.0.0": {
+    "ChargingStationLibrary/1.0.0": {
       "type": "project",
-      "path": "../ChargingStation/ChargingStation.csproj",
-      "msbuildProject": "../ChargingStation/ChargingStation.csproj"
+      "path": "../ChargingStationLibrary/ChargingStationLibrary.csproj",
+      "msbuildProject": "../ChargingStationLibrary/ChargingStationLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "ChargingStation >= 1.0.0",
+      "ChargingStationLibrary >= 1.0.0",
       "Microsoft.CodeCoverage >= 17.1.0",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
       "NUnit >= 3.13.2",
@@ -3934,8 +3930,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStation\\ChargingStation.csproj": {
-              "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStation\\ChargingStation.csproj"
+            "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj": {
+              "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj"
             }
           }
         }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace UsbSimulator
+﻿namespace UsbSimulator
 {
     public class CurrentEventArgs : EventArgs
     {

@@ -15,7 +15,7 @@ namespace UsbSimulator.Test
         [SetUp]
         public void Setup()
         {
-            _uut = new UsbChargerSimulator();
+            _uut = new();
         }
 
         [Test]
@@ -90,7 +90,7 @@ namespace UsbSimulator.Test
         [Test]
         public void Started_SimulateOverload_ReceivesHighValue()
         {
-            ManualResetEvent pause = new ManualResetEvent(false);
+            ManualResetEvent pause = new(false);
             double lastValue = 0;
 
             _uut.CurrentValueEvent += (o, args) =>
@@ -117,7 +117,7 @@ namespace UsbSimulator.Test
         [Test]
         public void Started_SimulateDisconnected_ReceivesZero()
         {
-            ManualResetEvent pause = new ManualResetEvent(false);
+            ManualResetEvent pause = new(false);
             double lastValue = 1000;
 
             _uut.CurrentValueEvent += (o, args) =>

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Timers;
+﻿using System.Timers;
 
 namespace UsbSimulator
 {
@@ -29,7 +28,7 @@ namespace UsbSimulator
             Connected = true;
             _overload = false;
 
-            _timer = new System.Timers.Timer();
+            _timer = new();
             _timer.Enabled = false;
             _timer.Interval = CurrentTickInterval;
             _timer.Elapsed += TimerOnElapsed;
@@ -109,7 +108,7 @@ namespace UsbSimulator
 
         private void OnNewCurrent()
         {
-            CurrentValueEvent?.Invoke(this, new CurrentEventArgs() {Current = this.CurrentValue});
+            CurrentValueEvent?.Invoke(this, new() {Current = this.CurrentValue});
         }
     }
 }
