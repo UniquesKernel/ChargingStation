@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChargingStation", "Charging
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChargingStationTest", "ChargingStationTest\ChargingStationTest.csproj", "{D71BDD51-C7E4-48D8-A636-D9060B647DC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChargingStationLibrary", "ChargingStationLibrary\ChargingStationLibrary.csproj", "{1819DA12-087B-4BF1-9705-08D6FCD9FD5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D71BDD51-C7E4-48D8-A636-D9060B647DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D71BDD51-C7E4-48D8-A636-D9060B647DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D71BDD51-C7E4-48D8-A636-D9060B647DC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1819DA12-087B-4BF1-9705-08D6FCD9FD5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1819DA12-087B-4BF1-9705-08D6FCD9FD5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1819DA12-087B-4BF1-9705-08D6FCD9FD5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1819DA12-087B-4BF1-9705-08D6FCD9FD5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
