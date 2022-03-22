@@ -1,25 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Sune\\Documents\\UNI\\SWT\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj": {}
+    "C:\\Users\\Yevhen\\Documents\\Software-technology\\Sem4\\SoftwareTest\\Software_Test_Hand_Ins\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj": {}
   },
   "projects": {
-    "D:\\Sune\\Documents\\UNI\\SWT\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj": {
+    "C:\\Users\\Yevhen\\Documents\\Software-technology\\Sem4\\SoftwareTest\\Software_Test_Hand_Ins\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Sune\\Documents\\UNI\\SWT\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Yevhen\\Documents\\Software-technology\\Sem4\\SoftwareTest\\Software_Test_Hand_Ins\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj",
         "projectName": "ChargingStationLibrary",
-        "projectPath": "D:\\Sune\\Documents\\UNI\\SWT\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj",
-        "packagesPath": "C:\\Users\\Sune\\.nuget\\packages\\",
-        "outputPath": "D:\\Sune\\Documents\\UNI\\SWT\\ChargingStation\\ChargingStationLibrary\\obj\\",
+        "projectPath": "C:\\Users\\Yevhen\\Documents\\Software-technology\\Sem4\\SoftwareTest\\Software_Test_Hand_Ins\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj",
+        "packagesPath": "C:\\Users\\Yevhen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yevhen\\Documents\\Software-technology\\Sem4\\SoftwareTest\\Software_Test_Hand_Ins\\ChargingStation\\ChargingStationLibrary\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Sune\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Yevhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
