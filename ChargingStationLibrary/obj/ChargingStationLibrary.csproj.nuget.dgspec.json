@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj": {}
+    "D:\\Sune\\Documents\\UNI\\SWT\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj": {}
   },
   "projects": {
-    "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj": {
+    "D:\\Sune\\Documents\\UNI\\SWT\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj",
+        "projectUniqueName": "D:\\Sune\\Documents\\UNI\\SWT\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj",
         "projectName": "ChargingStationLibrary",
-        "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj",
-        "packagesPath": "C:\\Users\\UniquesKernel\\.nuget\\packages\\",
-        "outputPath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStationLibrary\\obj\\",
+        "projectPath": "D:\\Sune\\Documents\\UNI\\SWT\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj",
+        "packagesPath": "C:\\Users\\Sune\\.nuget\\packages\\",
+        "outputPath": "D:\\Sune\\Documents\\UNI\\SWT\\ChargingStation\\ChargingStationLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\UniquesKernel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sune\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -64,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

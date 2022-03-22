@@ -6,10 +6,14 @@ public class ChargerConnectEvent : EventArgs
 }
 public interface IChargeController
 {
-  event EventHandler<ChargerConnectEvent> ConnectionStatusEvent;
-  void Connect();
-  void Disconnect();
+    event EventHandler<ChargerConnectEvent> ConnectionStatusEvent;
+    void Connect();
+    void Disconnect();
 
-  void ChargingMessages();
+    void StartCharge();
+
+    void StopCharge();
+
+    void ChargingMessages();
 
 }
