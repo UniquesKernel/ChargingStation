@@ -11,4 +11,6 @@ public interface IChargeController
   void Disconnect();
 
   void ChargingMessages();
+
+  /**/
 }
