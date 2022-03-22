@@ -1,0 +1,12 @@
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStationLibrary\bin\Debug\net6.0\ChargingStationLibrary.deps.json
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStationLibrary\bin\Debug\net6.0\ChargingStationLibrary.dll
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStationLibrary\bin\Debug\net6.0\ChargingStationLibrary.pdb
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.csproj.AssemblyReference.cache
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.GeneratedMSBuildEditorConfig.editorconfig
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.AssemblyInfoInputs.cache
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.AssemblyInfo.cs
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.csproj.CoreCompileInputs.cache
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.dll
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\refint\ChargingStationLibrary.dll
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.pdb
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ref\ChargingStationLibrary.dll

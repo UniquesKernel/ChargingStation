@@ -12,5 +12,4 @@ public interface IChargeController
 
   void ChargingMessages();
 
-  /**/
 }
