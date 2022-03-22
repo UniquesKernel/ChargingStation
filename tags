@@ -1,0 +1,103 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ChargeController	ChargingStationLibrary/ChargeController.cs	/^  public ChargeController(UsbChargerSimulator usbCharger)$/;"	m	class:ChargeController
+ChargeController	ChargingStationLibrary/ChargeController.cs	/^public class ChargeController : IChargeController$/;"	c
+ChargeTimeMinutes	ChargingStationLibrary/UsbChargerSimulator.cs	/^        private const int ChargeTimeMinutes = 20; \/\/ minutes$/;"	f	class:UsbSimulator.UsbChargerSimulator	file:
+ChargerConnectEvent	ChargingStationLibrary/IChargeController.cs	/^public class ChargerConnectEvent : EventArgs$/;"	c
+ChargerIsConnected	ChargingStationLibrary/IChargeController.cs	/^  public bool ChargerIsConnected { get; set; } = false;$/;"	p	class:ChargerConnectEvent
+ChargingMessages	ChargingStationLibrary/ChargeController.cs	/^  public void ChargingMessages()$/;"	m	class:ChargeController
+ChargingMessages	ChargingStationLibrary/IChargeController.cs	/^  void ChargingMessages();$/;"	m	interface:IChargeController
+CloseDoor	ChargingStationLibrary/DoorSimulator.cs	/^  public void CloseDoor()$/;"	m	class:DoorSimulator
+Connect	ChargingStationLibrary/ChargeController.cs	/^  public void Connect()$/;"	m	class:ChargeController
+Connect	ChargingStationLibrary/IChargeController.cs	/^  void Connect();$/;"	m	interface:IChargeController
+Connected	ChargingStationLibrary/IUsbCharger.cs	/^        bool Connected { get; }$/;"	p	interface:UsbSimulator.IUsbCharger
+Connected	ChargingStationLibrary/UsbChargerSimulator.cs	/^        public bool Connected { get; private set; }$/;"	p	class:UsbSimulator.UsbChargerSimulator
+ConnectionStatusEvent	ChargingStationLibrary/ChargeController.cs	/^  public event EventHandler<ChargerConnectEvent>? ConnectionStatusEvent;$/;"	E	class:ChargeController
+ConnectionStatusEvent	ChargingStationLibrary/IChargeController.cs	/^  event EventHandler<ChargerConnectEvent> ConnectionStatusEvent;$/;"	E	interface:IChargeController
+Current	ChargingStationLibrary/IUsbCharger.cs	/^        public double Current { set; get; }$/;"	p	class:UsbSimulator.CurrentEventArgs
+CurrentEventArgs	ChargingStationLibrary/IUsbCharger.cs	/^    public class CurrentEventArgs : EventArgs$/;"	c	namespace:UsbSimulator
+CurrentTickInterval	ChargingStationLibrary/UsbChargerSimulator.cs	/^        private const int CurrentTickInterval = 250; \/\/ ms$/;"	f	class:UsbSimulator.UsbChargerSimulator	file:
+CurrentValue	ChargingStationLibrary/IUsbCharger.cs	/^        double CurrentValue { get; }$/;"	p	interface:UsbSimulator.IUsbCharger
+CurrentValue	ChargingStationLibrary/UsbChargerSimulator.cs	/^        public double CurrentValue { get; private set; }$/;"	p	class:UsbSimulator.UsbChargerSimulator
+CurrentValueEvent	ChargingStationLibrary/IUsbCharger.cs	/^        event EventHandler<CurrentEventArgs> CurrentValueEvent;$/;"	E	interface:UsbSimulator.IUsbCharger
+CurrentValueEvent	ChargingStationLibrary/UsbChargerSimulator.cs	/^        public event EventHandler<CurrentEventArgs> CurrentValueEvent;$/;"	E	class:UsbSimulator.UsbChargerSimulator
+Disconnect	ChargingStationLibrary/ChargeController.cs	/^  public void Disconnect()$/;"	m	class:ChargeController
+Disconnect	ChargingStationLibrary/IChargeController.cs	/^  void Disconnect();$/;"	m	interface:IChargeController
+DoorCanBeClosed	ChargingStationTest/TestDoorSimulator.cs	/^  public void DoorCanBeClosed()$/;"	m	class:TestDoorSimulator
+DoorCanBeClosedByEvent	ChargingStationTest/TestDoorSimulator.cs	/^  public void DoorCanBeClosedByEvent()$/;"	m	class:TestDoorSimulator
+DoorCanBeLocked	ChargingStationTest/TestDoorSimulator.cs	/^  public void DoorCanBeLocked()$/;"	m	class:TestDoorSimulator
+DoorCanBeOpened	ChargingStationTest/TestDoorSimulator.cs	/^  public void DoorCanBeOpened()$/;"	m	class:TestDoorSimulator
+DoorCanBeOpenedByEvent	ChargingStationTest/TestDoorSimulator.cs	/^  public void DoorCanBeOpenedByEvent()$/;"	m	class:TestDoorSimulator
+DoorCanBeUnlocked	ChargingStationTest/TestDoorSimulator.cs	/^  public void DoorCanBeUnlocked()$/;"	m	class:TestDoorSimulator
+DoorChanged	ChargingStationLibrary/DoorSimulator.cs	/^  public event EventHandler<DoorEventArgs>? DoorChanged;$/;"	E	class:DoorSimulator
+DoorChanged	ChargingStationLibrary/IDoor.cs	/^  event EventHandler<DoorEventArgs> DoorChanged;$/;"	E	interface:IDoor
+DoorEventArgs	ChargingStationLibrary/IDoor.cs	/^public class DoorEventArgs : EventArgs$/;"	c
+DoorIsClosedByDefault	ChargingStationTest/TestDoorSimulator.cs	/^  public void DoorIsClosedByDefault()$/;"	m	class:TestDoorSimulator
+DoorIsOpen	ChargingStationLibrary/IDoor.cs	/^  public bool DoorIsOpen { get; set; }$/;"	p	class:DoorEventArgs
+DoorIsUnlockedByDefault	ChargingStationTest/TestDoorSimulator.cs	/^  public void DoorIsUnlockedByDefault()$/;"	m	class:TestDoorSimulator
+DoorSimulator	ChargingStationLibrary/DoorSimulator.cs	/^  public DoorSimulator()$/;"	m	class:DoorSimulator
+DoorSimulator	ChargingStationLibrary/DoorSimulator.cs	/^public class DoorSimulator : IDoor$/;"	c
+FullyChargedCurrent	ChargingStationLibrary/UsbChargerSimulator.cs	/^        private const double FullyChargedCurrent = 2.5; \/\/ mA$/;"	f	class:UsbSimulator.UsbChargerSimulator	file:
+IChargeController	ChargingStationLibrary/IChargeController.cs	/^public interface IChargeController$/;"	i
+IDoor	ChargingStationLibrary/IDoor.cs	/^public interface IDoor$/;"	i
+IUsbCharger	ChargingStationLibrary/IUsbCharger.cs	/^    public interface IUsbCharger$/;"	i	namespace:UsbSimulator
+IsLocked	ChargingStationLibrary/DoorSimulator.cs	/^  public bool IsLocked { get; private set; } = false;$/;"	p	class:DoorSimulator
+IsOpen	ChargingStationLibrary/DoorSimulator.cs	/^  public bool IsOpen { get; private set; } = false;$/;"	p	class:DoorSimulator
+Lock	ChargingStationLibrary/DoorSimulator.cs	/^  public void Lock()$/;"	m	class:DoorSimulator
+Lock	ChargingStationLibrary/IDoor.cs	/^  void Lock();$/;"	m	interface:IDoor
+MaxCurrent	ChargingStationLibrary/UsbChargerSimulator.cs	/^        private const double MaxCurrent = 500.0; \/\/ mA$/;"	f	class:UsbSimulator.UsbChargerSimulator	file:
+OnDoorChanged	ChargingStationLibrary/DoorSimulator.cs	/^  private void OnDoorChanged()$/;"	m	class:DoorSimulator	file:
+OnNewCurrent	ChargingStationLibrary/UsbChargerSimulator.cs	/^        private void OnNewCurrent()$/;"	m	class:UsbSimulator.UsbChargerSimulator	file:
+OpenDoor	ChargingStationLibrary/DoorSimulator.cs	/^  public void OpenDoor()$/;"	m	class:DoorSimulator
+OverloadCurrent	ChargingStationLibrary/UsbChargerSimulator.cs	/^        private const double OverloadCurrent = 750; \/\/ mA$/;"	f	class:UsbSimulator.UsbChargerSimulator	file:
+SetUp	ChargingStationTest/TestChargeController.cs	/^  public void SetUp()$/;"	m	class:TestChargeController
+SetUp	ChargingStationTest/TestDoorSimulator.cs	/^  public void SetUp()$/;"	m	class:TestDoorSimulator
+Setup	ChargingStationTest/TestUsbChargerSimulator.cs	/^        public void Setup()$/;"	m	class:UsbSimulator.Test.TestUsbChargerSimulator
+SimulateClosedDoor	ChargingStationLibrary/DoorSimulator.cs	/^  public void SimulateClosedDoor()$/;"	m	class:DoorSimulator
+SimulateConnected	ChargingStationLibrary/UsbChargerSimulator.cs	/^        public void SimulateConnected(bool connected)$/;"	m	class:UsbSimulator.UsbChargerSimulator
+SimulateDisconnected_ReturnsDisconnected	ChargingStationTest/TestUsbChargerSimulator.cs	/^        public void SimulateDisconnected_ReturnsDisconnected()$/;"	m	class:UsbSimulator.Test.TestUsbChargerSimulator
+SimulateDisconnected_Start_ReceivesZeroValueImmediately	ChargingStationTest/TestUsbChargerSimulator.cs	/^        public void SimulateDisconnected_Start_ReceivesZeroValueImmediately()$/;"	m	class:UsbSimulator.Test.TestUsbChargerSimulator
+SimulateOpenDoor	ChargingStationLibrary/DoorSimulator.cs	/^  public void SimulateOpenDoor()$/;"	m	class:DoorSimulator
+SimulateOverload	ChargingStationLibrary/UsbChargerSimulator.cs	/^        public void SimulateOverload(bool overload)$/;"	m	class:UsbSimulator.UsbChargerSimulator
+SimulateOverload_Start_ReceivesHighValueImmediately	ChargingStationTest/TestUsbChargerSimulator.cs	/^        public void SimulateOverload_Start_ReceivesHighValueImmediately()$/;"	m	class:UsbSimulator.Test.TestUsbChargerSimulator
+StartCharge	ChargingStationLibrary/IUsbCharger.cs	/^        void StartCharge();$/;"	m	interface:UsbSimulator.IUsbCharger
+StartCharge	ChargingStationLibrary/UsbChargerSimulator.cs	/^        public void StartCharge()$/;"	m	class:UsbSimulator.UsbChargerSimulator
+StartedNoEventReceiver_WaitSomeTime_PropertyChangedValue	ChargingStationTest/TestUsbChargerSimulator.cs	/^        public void StartedNoEventReceiver_WaitSomeTime_PropertyChangedValue()$/;"	m	class:UsbSimulator.Test.TestUsbChargerSimulator
+Started_SimulateDisconnected_ReceivesZero	ChargingStationTest/TestUsbChargerSimulator.cs	/^        public void Started_SimulateDisconnected_ReceivesZero()$/;"	m	class:UsbSimulator.Test.TestUsbChargerSimulator
+Started_SimulateOverload_ReceivesHighValue	ChargingStationTest/TestUsbChargerSimulator.cs	/^        public void Started_SimulateOverload_ReceivesHighValue()$/;"	m	class:UsbSimulator.Test.TestUsbChargerSimulator
+Started_WaitSomeTime_PropertyMatchesReceivedValue	ChargingStationTest/TestUsbChargerSimulator.cs	/^        public void Started_WaitSomeTime_PropertyMatchesReceivedValue()$/;"	m	class:UsbSimulator.Test.TestUsbChargerSimulator
+Started_WaitSomeTime_ReceivedChangedValue	ChargingStationTest/TestUsbChargerSimulator.cs	/^        public void Started_WaitSomeTime_ReceivedChangedValue()$/;"	m	class:UsbSimulator.Test.TestUsbChargerSimulator
+Started_WaitSomeTime_ReceivedSeveralValues	ChargingStationTest/TestUsbChargerSimulator.cs	/^        public void Started_WaitSomeTime_ReceivedSeveralValues()$/;"	m	class:UsbSimulator.Test.TestUsbChargerSimulator
+StopCharge	ChargingStationLibrary/IUsbCharger.cs	/^        void StopCharge();$/;"	m	interface:UsbSimulator.IUsbCharger
+StopCharge	ChargingStationLibrary/UsbChargerSimulator.cs	/^        public void StopCharge()$/;"	m	class:UsbSimulator.UsbChargerSimulator
+StopCharge_IsCharging_PropertyIsZero	ChargingStationTest/TestUsbChargerSimulator.cs	/^        public void StopCharge_IsCharging_PropertyIsZero()$/;"	m	class:UsbSimulator.Test.TestUsbChargerSimulator
+StopCharge_IsCharging_ReceivesNoMoreValues	ChargingStationTest/TestUsbChargerSimulator.cs	/^        public void StopCharge_IsCharging_ReceivesNoMoreValues()$/;"	m	class:UsbSimulator.Test.TestUsbChargerSimulator
+StopCharge_IsCharging_ReceivesZeroValue	ChargingStationTest/TestUsbChargerSimulator.cs	/^        public void StopCharge_IsCharging_ReceivesZeroValue()$/;"	m	class:UsbSimulator.Test.TestUsbChargerSimulator
+TestChargeController	ChargingStationTest/TestChargeController.cs	/^public class TestChargeController$/;"	c
+TestDoorSimulator	ChargingStationTest/TestDoorSimulator.cs	/^public class TestDoorSimulator$/;"	c
+TestUsbChargerSimulator	ChargingStationTest/TestUsbChargerSimulator.cs	/^    public class TestUsbChargerSimulator$/;"	c	namespace:UsbSimulator.Test
+TimeTickerInterval	ChargingStationLibrary/DoorSimulator.cs	/^  public const int TimeTickerInterval = 250;$/;"	f	class:DoorSimulator
+TimerOnElapsed	ChargingStationLibrary/DoorSimulator.cs	/^  private void TimerOnElapsed(object sender, ElapsedEventArgs e)$/;"	m	class:DoorSimulator	file:
+TimerOnElapsed	ChargingStationLibrary/UsbChargerSimulator.cs	/^        private void TimerOnElapsed(object sender, ElapsedEventArgs e)$/;"	m	class:UsbSimulator.UsbChargerSimulator	file:
+Unlock	ChargingStationLibrary/DoorSimulator.cs	/^  public void Unlock()$/;"	m	class:DoorSimulator
+Unlock	ChargingStationLibrary/IDoor.cs	/^  void Unlock();$/;"	m	interface:IDoor
+UsbChargerSimulator	ChargingStationLibrary/UsbChargerSimulator.cs	/^        public UsbChargerSimulator()$/;"	m	class:UsbSimulator.UsbChargerSimulator
+UsbChargerSimulator	ChargingStationLibrary/UsbChargerSimulator.cs	/^    public class UsbChargerSimulator : IUsbCharger$/;"	c	namespace:UsbSimulator
+UsbSimulator	ChargingStationLibrary/IUsbCharger.cs	/^namespace UsbSimulator$/;"	n
+UsbSimulator	ChargingStationLibrary/UsbChargerSimulator.cs	/^namespace UsbSimulator$/;"	n
+UsbSimulator.Test	ChargingStationTest/TestUsbChargerSimulator.cs	/^namespace UsbSimulator.Test$/;"	n
+_charging	ChargingStationLibrary/UsbChargerSimulator.cs	/^        private bool _charging;$/;"	f	class:UsbSimulator.UsbChargerSimulator	file:
+_overload	ChargingStationLibrary/UsbChargerSimulator.cs	/^        private bool _overload;$/;"	f	class:UsbSimulator.UsbChargerSimulator	file:
+_ticksSinceStart	ChargingStationLibrary/UsbChargerSimulator.cs	/^        private int _ticksSinceStart;$/;"	f	class:UsbSimulator.UsbChargerSimulator	file:
+_timer	ChargingStationLibrary/DoorSimulator.cs	/^  private System.Timers.Timer _timer;$/;"	f	class:DoorSimulator	file:
+_timer	ChargingStationLibrary/UsbChargerSimulator.cs	/^        private System.Timers.Timer _timer;$/;"	f	class:UsbSimulator.UsbChargerSimulator	file:
+_usbCharger	ChargingStationLibrary/ChargeController.cs	/^  private UsbChargerSimulator _usbCharger;$/;"	f	class:ChargeController	file:
+_uut	ChargingStationTest/TestChargeController.cs	/^  private ChargeController _uut;$/;"	f	class:TestChargeController	file:
+_uut	ChargingStationTest/TestDoorSimulator.cs	/^  private DoorSimulator _uut;$/;"	f	class:TestDoorSimulator	file:
+_uut	ChargingStationTest/TestUsbChargerSimulator.cs	/^        private UsbChargerSimulator _uut;$/;"	f	class:UsbSimulator.Test.TestUsbChargerSimulator	file:
+ctor_CurentValueIsZero	ChargingStationTest/TestUsbChargerSimulator.cs	/^        public void ctor_CurentValueIsZero()$/;"	m	class:UsbSimulator.Test.TestUsbChargerSimulator
+ctor_IsConnected	ChargingStationTest/TestUsbChargerSimulator.cs	/^        public void ctor_IsConnected()$/;"	m	class:UsbSimulator.Test.TestUsbChargerSimulator

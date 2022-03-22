@@ -1,29 +1,32 @@
 ﻿using UsbSimulator;
 
-namespace ChargingStationLibrary;
-
-public class ChargeController : IChargeController
+namespace ChargingStationLibrary
 {
-  private UsbChargerSimulator _usbCharger;
 
-  public ChargeController(UsbChargerSimulator usbCharger)
+  public class ChargeController : IChargeController 
   {
-    _usbCharger = usbCharger;
+    private UsbChargerSimulator _usbCharger;
+
+    public ChargeController(UsbChargerSimulator usbCharger)
+    {
+      _usbCharger = usbCharger;
+    }
+
+    public event EventHandler<ChargerConnectEvent>? ConnectionStatusEvent;
+    public void Connect()
+    {
+      throw new NotImplementedException();
+    }
+
+    public void Disconnect()
+    {
+      throw new NotImplementedException();
+    }
+
+    public void ChargingMessages()
+    {
+      throw new NotImplementedException();
+    }
   }
 
-  public event EventHandler<ChargerConnectEvent>? ConnectionStatusEvent;
-  public void Connect()
-  {
-    throw new NotImplementedException();
-  }
-
-  public void Disconnect()
-  {
-    throw new NotImplementedException();
-  }
-
-  public void ChargingMessages()
-  {
-    throw new NotImplementedException();
-  }
 }

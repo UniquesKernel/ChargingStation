@@ -35,7 +35,7 @@ public class DoorSimulator : IDoor
   {
     if (!IsLocked)
     {
-      IsLocked = !IsLocked;
+      IsLocked = true;
     }
   }
 
@@ -43,7 +43,7 @@ public class DoorSimulator : IDoor
   {
     if (IsLocked)
     {
-      IsLocked = !IsLocked;
+      IsLocked = false;
     }
   }
 
@@ -51,14 +51,14 @@ public class DoorSimulator : IDoor
   {
     if (!IsOpen)
     {
-      IsOpen = !IsOpen;
+      IsOpen = true;
     }
   }
   public void SimulateClosedDoor()
   {
     if (IsOpen)
     {
-      IsOpen = !IsOpen;
+      IsOpen = false;
     }
   }
 
