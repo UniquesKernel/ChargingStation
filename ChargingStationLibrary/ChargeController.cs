@@ -3,7 +3,7 @@
 namespace ChargingStationLibrary
 {
 
-  public class ChargeController : IChargeController 
+  public class ChargeController : IChargeController
   {
     private UsbChargerSimulator _usbCharger;
 
@@ -13,17 +13,13 @@ namespace ChargingStationLibrary
     }
 
     public event EventHandler<ChargerConnectEvent>? ConnectionStatusEvent;
+
     public void Connect()
     {
       throw new NotImplementedException();
     }
 
     public void Disconnect()
-    {
-      throw new NotImplementedException();
-    }
-
-    public void ChargingMessages()
     {
       throw new NotImplementedException();
     }
