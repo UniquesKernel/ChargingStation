@@ -1,0 +1,61 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ChargingStation/1.0.0": {
+        "dependencies": {
+          "ChargingStationLibrary": "1.0.0",
+          "Microsoft.CodeCoverage": "17.1.0",
+          "NunitXml.TestLogger": "3.0.117"
+        },
+        "runtime": {
+          "ChargingStation.dll": {}
+        }
+      },
+      "Microsoft.CodeCoverage/17.1.0": {
+        "runtime": {
+          "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "17.100.221.61401"
+          }
+        }
+      },
+      "NunitXml.TestLogger/3.0.117": {},
+      "ChargingStationLibrary/1.0.0": {
+        "runtime": {
+          "ChargingStationLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ChargingStation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.CodeCoverage/17.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0N/ZJ71ncCxQWhgtkEYKOgu2oMHa8h1tsOUbhmIKXF8UwtSUCe4vHAsJ3DVcNWRwNfQzSTy263ZE+QF6MdIhhQ==",
+      "path": "microsoft.codecoverage/17.1.0",
+      "hashPath": "microsoft.codecoverage.17.1.0.nupkg.sha512"
+    },
+    "NunitXml.TestLogger/3.0.117": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+AEoIB71gu6R2QXzAs68MLlceLgo0T9hcL8yWGUi+UzozsDMIjHGKhqDqgCFwtO8UcXAJBaFNkK9o0gtFaLTSw==",
+      "path": "nunitxml.testlogger/3.0.117",
+      "hashPath": "nunitxml.testlogger.3.0.117.nupkg.sha512"
+    },
+    "ChargingStationLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

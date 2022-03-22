@@ -1,13 +1,14 @@
-namespace ChargingStationLibrary;
+﻿namespace ChargingStationLibrary;
 
 public class DoorEventArgs : EventArgs
 {
-  public bool DoorIsOpen;
+  public bool DoorIsOpen { get; set; }
+
 }
 public interface IDoor
 {
-  event EventHandler<DoorEventArgs> CurrentDoorStatus;
+  event EventHandler<DoorEventArgs> DoorChanged;
+  void Lock();
+  void Unlock();
 
-  bool DoorIsOpenStatus { get; }
-  bool DoorIsLocked { get; }
 }
