@@ -21,25 +21,10 @@ public class TestChargeController
     }
 
     [Test]
-    public void testManualConnect()
-    {
-        _uut.SimulateConnect();
-        Assert.That(_uut.IsConnected,Is.True);
-    }
-
-    [Test]
-    public void testManualDisconnect()
-    {
-        _uut.SimulateConnect();
-        _uut.SimulateDisconnect();
-        Assert.That(_uut.IsConnected, Is.False);
-    }
-
-    [Test]
     public void testConnect()
     {
         _uut.Connect();
-        Assert.That(_uut.IsConnected, Is.True);
+        Assert.That(_uut.IsConnected,Is.True);
     }
 
     [Test]
@@ -49,5 +34,4 @@ public class TestChargeController
         _uut.Disconnect();
         Assert.That(_uut.IsConnected, Is.False);
     }
-
 }

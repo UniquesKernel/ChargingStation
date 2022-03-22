@@ -7,39 +7,24 @@ namespace ChargingStationLibrary
 
     public class ChargeController : IChargeController
     {
-        private UsbChargerSimulator _usbCharger;
+        private IUsbCharger _usbCharger;
         //private IDisplay _display;
 
         private const int TimeTickerInterval = 250;
 
         public bool IsConnected { get; private set; } = false;
 
-        public ChargeController(UsbChargerSimulator usbCharger)//, IDisplay display)
+        public ChargeController(IUsbCharger usbCharger)//, IDisplay display)
         {
             _usbCharger = usbCharger;
+            _usbCharger.CurrentValueEvent += OnCurrentChanged;
             //_display = display;
-
-
-            //set timer
-            _timer = new System.Timers.Timer();
-            _timer.Enabled = false;
-            _timer.Interval = TimeTickerInterval;
-            _timer.Elapsed += TimerOnElapsed;
-
         }
 
-        
-        private System.Timers.Timer _timer;
+        public event EventHandler<ChargerConnectEvent> ConnectionStatusEvent;
 
 
-        public event EventHandler<ChargerConnectEvent>? ConnectionStatusEvent;
-
-        private void TimerOnElapsed(object sender, ElapsedEventArgs e)
-        {
-            OnConnectionChanged();
-        }
-
-        public void SimulateConnect()
+        public void Connect()
         {
             if (!IsConnected)
             {
@@ -47,26 +32,12 @@ namespace ChargingStationLibrary
             }
         }
 
-        public void SimulateDisconnect()
+        public void Disconnect()
         {
             if (IsConnected)
             {
                 IsConnected = false;
             }
-        }
-
-        public void Connect()
-        {
-            SimulateConnect();
-            OnConnectionChanged();
-            _timer.Start();
-        }
-
-        public void Disconnect()
-        {
-            SimulateDisconnect();
-            OnConnectionChanged();
-            _timer.Start();
         }
 
         public void StartCharge()
@@ -84,13 +55,28 @@ namespace ChargingStationLibrary
             throw new NotImplementedException();
         }
 
-        private void OnConnectionChanged()
+        public void OnCurrentChanged(object sender, CurrentEventArgs e)
         {
-            ConnectionStatusEvent?.Invoke(this, new ChargerConnectEvent() { ChargerIsConnected = IsConnected });
+            if(e.Current > 500)
+            {
+                StopCharge();
+                //display.overcharge();
+            }else if(e.Current <= 500 && e.Current > 5)
+            {
+                //display.charging();
+            }else if(e.Current <= 5 && e.Current > 0)
+            {
+                StopCharge();
+                //display.chargingComplete
+            }
+            else
+            {
+                //display.nothing();
+            }
+
         }
 
     }
-
 
 }
 
