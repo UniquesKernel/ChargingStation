@@ -7,7 +7,7 @@ namespace ChargingStationTest
     [TestFixture]
     public class TestRfidReaderSimulator
     {
-        //private RfidReaderSimulator _uut;
+        //private RfidReaderSimulator _uut; WHY??
 
         public void Setup()
         {
