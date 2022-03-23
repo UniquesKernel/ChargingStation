@@ -78,22 +78,21 @@ namespace ChargingStationLibrary
           
             if (e.Current > 500)
             {
-              StopCharge();
-              _display.DisplayContent("overcharge");
+                StopCharge();
+                _display.DisplayContent("overcharge");
             }
             else if (e.Current <= 500 && e.Current > 5)
             {
-                Console.Clear();
-                _display.DisplayContent("charging: " + e.Current.ToString());
+                _display.DisplayContent("charging");
             }
             else if (e.Current <= 5 && e.Current > 0)
             {
-              StopCharge();
-              _display.DisplayContent("charging complete");
+                StopCharge();
+                _display.DisplayContent("charging complete");
             }
             else
             {
-              _display.DisplayContent("");
+                _display.DisplayContent("");
             }
           
         }

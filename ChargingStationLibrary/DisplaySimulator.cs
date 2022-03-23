@@ -16,6 +16,7 @@ namespace ChargingStationLibrary
         public void DisplayContent(string inputText)
         {
             _frameBuffer = inputText;
+            Console.Clear();
             Console.WriteLine(inputText);
         }
     }
