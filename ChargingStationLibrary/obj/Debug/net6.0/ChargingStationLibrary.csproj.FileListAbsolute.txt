@@ -1,0 +1,12 @@
+C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Hand_Ins\ChargingStation\ChargingStationLibrary\bin\Debug\net6.0\ChargingStationLibrary.deps.json
+C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Hand_Ins\ChargingStation\ChargingStationLibrary\bin\Debug\net6.0\ChargingStationLibrary.dll
+C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Hand_Ins\ChargingStation\ChargingStationLibrary\bin\Debug\net6.0\ref\ChargingStationLibrary.dll
+C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Hand_Ins\ChargingStation\ChargingStationLibrary\bin\Debug\net6.0\ChargingStationLibrary.pdb
+C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Hand_Ins\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.csproj.AssemblyReference.cache
+C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Hand_Ins\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Hand_Ins\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.AssemblyInfoInputs.cache
+C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Hand_Ins\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.AssemblyInfo.cs
+C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Hand_Ins\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Hand_Ins\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.dll
+C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Hand_Ins\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ref\ChargingStationLibrary.dll
+C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Hand_Ins\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.pdb
