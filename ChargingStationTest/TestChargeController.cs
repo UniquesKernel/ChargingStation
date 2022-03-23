@@ -50,6 +50,7 @@ public class TestChargeController
         Assert.That(mockDisplay.status, Is.EqualTo("charging"));
     }
 
+    [Test]
     public void testOverloadEvent()
     {
         _uut.Connect();
@@ -60,6 +61,7 @@ public class TestChargeController
         Assert.That(mockDisplay.status, Is.EqualTo("overcharge"));
     }
 
+    [Test]
     public void testFullCharge()
     {
         _uut.Connect();

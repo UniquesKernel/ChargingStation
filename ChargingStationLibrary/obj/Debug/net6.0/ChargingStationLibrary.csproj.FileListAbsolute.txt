@@ -10,15 +10,3 @@ C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Ha
 C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Hand_Ins\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.dll
 C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Hand_Ins\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ref\ChargingStationLibrary.dll
 C:\Users\Yevhen\Documents\Software-technology\Sem4\SoftwareTest\Software_Test_Hand_Ins\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.pdb
-D:\Sune\Documents\UNI\SWT\ChargingStation\ChargingStationLibrary\bin\Debug\net6.0\ChargingStationLibrary.deps.json
-D:\Sune\Documents\UNI\SWT\ChargingStation\ChargingStationLibrary\bin\Debug\net6.0\ChargingStationLibrary.dll
-D:\Sune\Documents\UNI\SWT\ChargingStation\ChargingStationLibrary\bin\Debug\net6.0\ref\ChargingStationLibrary.dll
-D:\Sune\Documents\UNI\SWT\ChargingStation\ChargingStationLibrary\bin\Debug\net6.0\ChargingStationLibrary.pdb
-D:\Sune\Documents\UNI\SWT\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.csproj.AssemblyReference.cache
-D:\Sune\Documents\UNI\SWT\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.GeneratedMSBuildEditorConfig.editorconfig
-D:\Sune\Documents\UNI\SWT\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.AssemblyInfoInputs.cache
-D:\Sune\Documents\UNI\SWT\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.AssemblyInfo.cs
-D:\Sune\Documents\UNI\SWT\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.csproj.CoreCompileInputs.cache
-D:\Sune\Documents\UNI\SWT\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.dll
-D:\Sune\Documents\UNI\SWT\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ref\ChargingStationLibrary.dll
-D:\Sune\Documents\UNI\SWT\ChargingStation\ChargingStationLibrary\obj\Debug\net6.0\ChargingStationLibrary.pdb
