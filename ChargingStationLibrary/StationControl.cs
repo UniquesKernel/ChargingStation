@@ -16,7 +16,7 @@ namespace ChargingStationLibrary
         private IChargeController _charger;
         private int _oldId;
         private IDoor _door;
-        private IRfidReader _fidReader;
+        private IRfidReader _rfidReader;
         private ILog _log;
         private IDisplay _display;
 
@@ -32,11 +32,12 @@ namespace ChargingStationLibrary
         {
           _charger = charger;
           _door = door;
-          _fidReader = rfidReader;
+          _rfidReader = rfidReader;
           _log = log;
           _display = display;
 
-          rfidReader.RfidDetected += RfidDetected;
+          _rfidReader.RfidDetected += RfidDetected;
+          _door.DoorChanged += OnDoorStatusChange;
 
         }
 
@@ -95,7 +96,17 @@ namespace ChargingStationLibrary
                     break;
             }
         }
-        
-        // Her mangler de andre trigger handlere
+
+        private void OnDoorStatusChange(object sender, DoorEventArgs e)
+        {
+          if (e.DoorIsOpen == true)
+          {
+            _display.DisplayContent("Tilslut Telefon");
+          }
+          else
+          {
+            _display.DisplayContent("Indlæs Rfid");
+          }
+        }
     }
 }
