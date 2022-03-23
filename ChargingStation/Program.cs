@@ -19,7 +19,7 @@ namespace ChargingStationLibrary;
             do
             {
                 string input;
-                System.Console.WriteLine("Indtast E, O, C, R: ");
+                System.Console.WriteLine("Indtast E, O, T, F, C, R: ");
                 input = Console.ReadLine();
                 if (string.IsNullOrEmpty(input)) continue;
 

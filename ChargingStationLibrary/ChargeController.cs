@@ -15,6 +15,7 @@ namespace ChargingStationLibrary
         private System.Timers.Timer _timer;
 
         public bool IsConnected { get; private set; } = false;
+        public bool OldConnectStatus { get; private set; }
 
         public event EventHandler<ChargerConnectEvent> ConnectionStatusEvent;
 
@@ -74,25 +75,28 @@ namespace ChargingStationLibrary
 
         private void OnCurrentChanged(object sender, CurrentEventArgs e)
         {
+          if (OldConnectStatus != IsConnected)
+          {
+            OldConnectStatus = IsConnected;
             if (e.Current > 500)
             {
-                StopCharge();
-                _display.DisplayContent("overcharge");
-            } 
+              StopCharge();
+              _display.DisplayContent("overcharge");
+            }
             else if (e.Current <= 500 && e.Current > 5)
             {
-                _display.DisplayContent("charging");
+              _display.DisplayContent("charging");
             }
             else if (e.Current <= 5 && e.Current > 0)
             {
-                StopCharge();
-                _display.DisplayContent("charging complete");
+              StopCharge();
+              _display.DisplayContent("charging complete");
             }
             else
             {
-                _display.DisplayContent("");
+              _display.DisplayContent("");
             }
-
+          }
         }
 
         private void OnConnectionChange()
