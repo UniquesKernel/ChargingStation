@@ -33,12 +33,13 @@ namespace ChargingStationTest
         }
 
         [TestCase(1234)]
-        public void Validate_RfidTag_EventFired(int rfid)
+        public void Correct_Rfid_Value_Passed(int rfid)
         {
             _uut.SimulateNewRfidDetected(rfid);
 
             Assert.That(_RfidDetectedEvent.Rfid, Is.EqualTo(rfid));
         }
+
         
     }
 }
