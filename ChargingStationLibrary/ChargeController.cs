@@ -55,10 +55,6 @@ namespace ChargingStationLibrary
             _usbCharger.StopCharge();
         }
 
-        public void ChargingMessages()
-        {
-            throw new NotImplementedException();
-        }
 
         public void OnCurrentChanged(object sender, CurrentEventArgs e)
         {

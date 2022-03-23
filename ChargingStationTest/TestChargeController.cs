@@ -50,7 +50,25 @@ public class TestChargeController
         Assert.That(mockDisplay.status, Is.EqualTo("charging"));
     }
 
+    public void testOverloadEvent()
+    {
+        _uut.Connect();
+        _uut.StartCharge();
+        mockUSB.setOvercharge();
+        System.Threading.Thread.Sleep(500);
 
+        Assert.That(mockDisplay.status, Is.EqualTo("overcharge"));
+    }
+
+    public void testFullCharge()
+    {
+        _uut.Connect();
+        _uut.StartCharge();
+        mockUSB.setChargeDone();
+        System.Threading.Thread.Sleep(500);
+
+        Assert.That(mockDisplay.status, Is.EqualTo("charging complete"));
+    }
 
 
 
