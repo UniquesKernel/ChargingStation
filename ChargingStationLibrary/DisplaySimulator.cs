@@ -1,5 +1,6 @@
 ﻿#nullable disable
 using System;
+using System.Timers;
 
 namespace ChargingStationLibrary
 {
@@ -8,16 +9,34 @@ namespace ChargingStationLibrary
         private string _frameBuffer;
         public string FrameBuffer { get; set; }
 
-        public  DisplaySimulator()
+        private const int TimeTickerInterval = 500;
+
+        private string _welcomeMessage = "Welcome to Charger Station!";
+        public string WelcomeMessage { get; }
+
+
+        public DisplaySimulator()
         {
-            _frameBuffer = null;
+            _timer = new System.Timers.Timer();
+            _timer.Enabled = true;
+            _timer.Interval = TimeTickerInterval;
+            _timer.Elapsed += TimerOnElapsed;
+            _timer.Start();
+            _frameBuffer = _welcomeMessage;
+            Console.WriteLine(_frameBuffer);
         }
+
+        private System.Timers.Timer _timer;
 
         public void DisplayContent(string inputText)
         {
-            _frameBuffer = inputText;
+            _frameBuffer = inputText; 
+        }
+
+        private void TimerOnElapsed(object? sender, ElapsedEventArgs e)
+        {
             Console.Clear();
-            Console.WriteLine(inputText);
+            Console.WriteLine(_frameBuffer);
         }
     }
 }

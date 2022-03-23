@@ -24,6 +24,11 @@ namespace ChargingStationTest
 
             Assert.That(_consoleText, Is.EqualTo(_uut.FrameBuffer));
         }
-         
+
+        [Test]
+        public void Validate_Start_Message()
+        {
+            Assert.That(_uut.FrameBuffer, Is.EqualTo(_uut.WelcomeMessage));
+        }
     }
 }
