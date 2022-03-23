@@ -9,6 +9,8 @@ public interface IChargeController
     event EventHandler<ChargerConnectEvent> ConnectionStatusEvent;
     void Connect();
     void Disconnect();
+  
+    bool IsConnected { get; }
 
     void StartCharge();
 

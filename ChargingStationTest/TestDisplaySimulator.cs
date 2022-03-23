@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Diagnostics;
 using NUnit.Framework;
 using ChargingStationLibrary;
 
@@ -8,7 +8,7 @@ namespace ChargingStationTest
     public class TestDisplaySimulator
     {
         private string? _consoleText;
-        private DisplaySimulator _uut;
+        private DisplaySimulator? _uut;
 
         [SetUp]
         public void Setup()
@@ -20,7 +20,7 @@ namespace ChargingStationTest
         [TestCase("TestText")]
         public void Validate_Displayed_Text(string testText)
         {
-            _uut.DisplayContent(testText);
+          _uut!.DisplayContent(testText);
 
             Assert.That(_consoleText, Is.EqualTo(_uut.FrameBuffer));
         }

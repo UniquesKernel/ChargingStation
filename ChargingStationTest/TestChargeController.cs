@@ -1,9 +1,8 @@
-﻿using NUnit.Framework;
+﻿#nullable disable
+using NUnit.Framework;
 using ChargingStationLibrary;
 using UsbSimulator;
 using System;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Timers;
 
 namespace ChargingStationTest;
@@ -144,16 +143,13 @@ public class usbMock : IUsbCharger
 
     public bool Connected { get; private set; }
 
-    private bool _overload;
     public bool _charging { get; private set; }
     private System.Timers.Timer _timer;
-    private int _ticksSinceStart;
 
     public usbMock()
     {
         CurrentValue = 0.0;
         Connected = true;
-        _overload = false;
 
         _timer = new System.Timers.Timer();
         _timer.Enabled = false;

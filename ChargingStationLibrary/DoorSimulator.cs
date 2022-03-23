@@ -26,7 +26,7 @@ public class DoorSimulator : IDoor
   #endregion
   
   #region Methods
-  private void TimerOnElapsed(object sender, ElapsedEventArgs e)
+  private void TimerOnElapsed(object? sender, ElapsedEventArgs e)
   {
     OnDoorChanged();
   }

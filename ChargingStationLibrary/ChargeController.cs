@@ -1,4 +1,5 @@
-﻿using UsbSimulator;
+﻿#nullable disable
+using UsbSimulator;
 using System.Timers;
 
 
@@ -71,7 +72,7 @@ namespace ChargingStationLibrary
         }
 
 
-        public void OnCurrentChanged(object sender, CurrentEventArgs e)
+        private void OnCurrentChanged(object sender, CurrentEventArgs e)
         {
             if (e.Current > 500)
             {

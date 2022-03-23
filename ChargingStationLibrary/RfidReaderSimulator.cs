@@ -1,4 +1,5 @@
-﻿using System;
+﻿#nullable disable
+using System;
 
 namespace ChargingStationLibrary
 {
@@ -13,8 +14,8 @@ namespace ChargingStationLibrary
 
         public void SimulateNewRfidDetected(int rfid)
         {
-            _newRfid = rfid;
-            OnRfidDetected();
+          _newRfid = rfid;
+          OnRfidDetected();
         }
 
         private void OnRfidDetected()
