@@ -2,7 +2,7 @@
 
 namespace ChargingStationLibrary
 {
-    internal class RfidReaderSimulator : IRfidReader
+    public class RfidReaderSimulator : IRfidReader
     {
 
         public RfidReaderSimulator() { }
