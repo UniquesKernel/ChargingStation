@@ -73,5 +73,25 @@ public class TestChargeController
     }
 
 
+    [Test]
+    public void testLowChargingCurrent()
+    {
+        _uut.Connect();
+        _uut.StartCharge();
+        mockUSB.CurrentValue = 5.1;
+        System.Threading.Thread.Sleep(500);
 
+        Assert.That(mockDisplay.status, Is.EqualTo("charging"));
+    }
+
+    [Test]
+    public void testNoConection()
+    {
+        _uut.Connect();
+        _uut.StartCharge();
+        mockUSB.CurrentValue = 0;
+        System.Threading.Thread.Sleep(500);
+
+        Assert.That(mockDisplay.status, Is.EqualTo(""));
+    }
 }

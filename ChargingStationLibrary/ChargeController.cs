@@ -74,7 +74,7 @@ namespace ChargingStationLibrary
             }
             else
             {
-                
+                _display.DisplayContent("");
             }
 
         }
