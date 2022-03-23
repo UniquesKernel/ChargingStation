@@ -75,7 +75,7 @@ namespace ChargingStationLibrary
 
         private void OnCurrentChanged(object sender, CurrentEventArgs e)
         {
-          OldConnectStatus = IsConnected;
+          
             if (e.Current > 500)
             {
               StopCharge();
@@ -83,8 +83,8 @@ namespace ChargingStationLibrary
             }
             else if (e.Current <= 500 && e.Current > 5)
             {
-              if (OldConnectStatus != IsConnected)
-                _display.DisplayContent("charging");
+                Console.Clear();
+                _display.DisplayContent("charging: " + e.Current.ToString());
             }
             else if (e.Current <= 5 && e.Current > 0)
             {

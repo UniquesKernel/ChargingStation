@@ -55,14 +55,14 @@ namespace ChargingStationLibrary
                         _door.Lock();
                         _charger.StartCharge();
                         _oldId = id;
-                        _log.Log(DateTime.Now + $": Skab låst med RFID: {id}");
+                        _log.Log($": Skab låst med RFID: {id}");
 
-                        Console.WriteLine("Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op.");
+                        _display.DisplayContent("Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op.");
                         _state = LadeskabState.Locked;
                     }
                     else
                     {
-                        Console.WriteLine("Din telefon er ikke ordentlig tilsluttet. Prøv igen.");
+                        _display.DisplayContent("Din telefon er ikke ordentlig tilsluttet. Prøv igen.");
                     }
 
                     break;
@@ -77,17 +77,15 @@ namespace ChargingStationLibrary
                     {
                         _charger.StopCharge();
                         _door.Unlock();
-                        using (var writer = File.AppendText(logFile))
-                        {
-                            writer.WriteLine(DateTime.Now + ": Skab låst op med RFID: {0}", id);
-                        }
-
-                        Console.WriteLine("Tag din telefon ud af skabet og luk døren");
+                        
+                        _log.Log($": Skab låst op med RFID: {id}");
+                       
+                        _display.DisplayContent("Tag din telefon ud af skabet og luk døren");
                         _state = LadeskabState.Available;
                     }
                     else
                     {
-                        Console.WriteLine("Forkert RFID tag");
+                        _display.DisplayContent("Forkert RFID tag");
                     }
 
                     break;
