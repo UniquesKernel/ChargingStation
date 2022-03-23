@@ -1,6 +1,8 @@
 ﻿using NUnit.Framework;
 using ChargingStationLibrary;
 using UsbSimulator;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ChargingStationTest;
 
@@ -8,10 +10,13 @@ namespace ChargingStationTest;
 public class TestChargeController
 {
     private ChargeController _uut;
+    private displayMock mockDisplay = new displayMock();
+    private usbMock mockUSB = new usbMock();
+
     [SetUp]
     public void SetUp()
-    {
-        _uut = new ChargeController(new UsbChargerSimulator());
+    {   
+        _uut = new ChargeController(mockUSB, mockDisplay); 
     }
 
     [Test]
@@ -34,4 +39,19 @@ public class TestChargeController
         _uut.Disconnect();
         Assert.That(_uut.IsConnected, Is.False);
     }
+
+    [Test]
+    public void testStartCharge()
+    {
+        _uut.Connect();
+        _uut.StartCharge();
+        System.Threading.Thread.Sleep(500);
+
+        Assert.That(mockDisplay.status, Is.EqualTo("charging"));
+    }
+
+
+
+
+
 }
