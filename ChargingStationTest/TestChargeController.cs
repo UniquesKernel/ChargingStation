@@ -97,6 +97,17 @@ public class TestChargeController
     }
 
     [Test]
+    public void testChargingEdgecase()
+    {
+        _uut.Connect();
+        _uut.StartCharge();
+        mockUSB.CurrentValue = 5;
+        System.Threading.Thread.Sleep(300);
+
+        Assert.That(mockDisplay.status, Is.EqualTo("charging complete"));
+    }
+
+    [Test]
     public void testNoConection()
     {
         _uut.Connect();
