@@ -9,7 +9,7 @@ public class LogSimulator : ILog
   public void Log(string message)
   {
     var writer = File.AppendText(_filename);
-    writer.WriteLine(message);
+    writer.WriteLine(DateTime.Now + " : " + message);
   }
 
 }

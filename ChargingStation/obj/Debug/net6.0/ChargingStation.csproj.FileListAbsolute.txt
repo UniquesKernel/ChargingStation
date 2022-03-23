@@ -46,6 +46,11 @@ D:/Sune/Documents/UNI/SWT/ChargingStation/ChargingStation/obj/Debug/net6.0/Charg
 D:/Sune/Documents/UNI/SWT/ChargingStation/ChargingStation/obj/Debug/net6.0/ref/ChargingStation.dll
 D:/Sune/Documents/UNI/SWT/ChargingStation/ChargingStation/obj/Debug/net6.0/ChargingStation.pdb
 D:/Sune/Documents/UNI/SWT/ChargingStation/ChargingStation/obj/Debug/net6.0/ChargingStation.genruntimeconfig.cache
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\obj\Debug\net6.0\ChargingStation.csproj.AssemblyReference.cache
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\obj\Debug\net6.0\ChargingStation.GeneratedMSBuildEditorConfig.editorconfig
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\obj\Debug\net6.0\ChargingStation.AssemblyInfoInputs.cache
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\obj\Debug\net6.0\ChargingStation.AssemblyInfo.cs
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\obj\Debug\net6.0\ChargingStation.csproj.CoreCompileInputs.cache
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.Extension.NUnit.Xml.TestLogger.dll
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.Extension.NUnit.Xml.TestAdapter.dll
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\bin\Debug\net6.0\Spekt.TestLogger.dll
@@ -59,11 +64,6 @@ D:/Sune/Documents/UNI/SWT/ChargingStation/ChargingStation/obj/Debug/net6.0/Charg
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\bin\Debug\net6.0\NSubstitute.dll
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\bin\Debug\net6.0\ChargingStationLibrary.dll
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\bin\Debug\net6.0\ChargingStationLibrary.pdb
-\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\obj\Debug\net6.0\ChargingStation.csproj.AssemblyReference.cache
-\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\obj\Debug\net6.0\ChargingStation.GeneratedMSBuildEditorConfig.editorconfig
-\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\obj\Debug\net6.0\ChargingStation.AssemblyInfoInputs.cache
-\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\obj\Debug\net6.0\ChargingStation.AssemblyInfo.cs
-\\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\obj\Debug\net6.0\ChargingStation.csproj.CoreCompileInputs.cache
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\obj\Debug\net6.0\ChargingStation.csproj.CopyComplete
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\obj\Debug\net6.0\ChargingStation.dll
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\Software-Test\ChargingStation\ChargingStation\obj\Debug\net6.0\refint\ChargingStation.dll

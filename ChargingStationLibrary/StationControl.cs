@@ -21,7 +21,7 @@ namespace ChargingStationLibrary
         private IDisplay _display;
 
         private string logFile = "logfile.txt"; // Navnet på systemets log-fil
-
+        private bool oldDoorStatus;
         public StationControl(
           IChargeController charger,
           IDoor door,
@@ -55,10 +55,7 @@ namespace ChargingStationLibrary
                         _door.Lock();
                         _charger.StartCharge();
                         _oldId = id;
-                        using (var writer = File.AppendText(logFile))
-                        {
-                            writer.WriteLine(DateTime.Now + ": Skab låst med RFID: {0}", id);
-                        }
+                        _log.Log(DateTime.Now + $": Skab låst med RFID: {id}");
 
                         Console.WriteLine("Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op.");
                         _state = LadeskabState.Locked;
@@ -99,11 +96,12 @@ namespace ChargingStationLibrary
 
         private void OnDoorStatusChange(object sender, DoorEventArgs e)
         {
-          if (e.DoorIsOpen == true)
+          if (e.DoorIsOpen != oldDoorStatus && e.DoorIsOpen == true)
           {
             _display.DisplayContent("Tilslut Telefon");
+            oldDoorStatus = true;
           }
-          else
+          else if (e.DoorIsOpen != oldDoorStatus && e.DoorIsOpen == false)
           {
             _display.DisplayContent("Indlæs Rfid");
           }
