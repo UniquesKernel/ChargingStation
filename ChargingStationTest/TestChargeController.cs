@@ -29,17 +29,27 @@ public class TestChargeController
 
     [Test]
     public void testConnect()
-    {
+    {   
+        bool connected = false;
+        _uut.ConnectionStatusEvent += (o, args) => connected = args.ChargerIsConnected;
         _uut.Connect();
-        Assert.That(_uut.IsConnected,Is.True);
+        System.Threading.Thread.Sleep(300);
+        Assert.That(connected, Is.True);
     }
 
     [Test]
     public void testDisconnect()
     {
+        bool connected = false;
+        _uut.ConnectionStatusEvent += (o, args) => connected = args.ChargerIsConnected;
+
         _uut.Connect();
+        System.Threading.Thread.Sleep(300);
+        Assert.That(connected, Is.True); // check that it connected properly ( just in case)
+
         _uut.Disconnect();
-        Assert.That(_uut.IsConnected, Is.False);
+        System.Threading.Thread.Sleep(300);
+        Assert.That(connected, Is.False);
     }
 
     [Test]
@@ -47,7 +57,7 @@ public class TestChargeController
     {
         _uut.Connect();
         _uut.StartCharge();
-        System.Threading.Thread.Sleep(500);
+        System.Threading.Thread.Sleep(300);
 
         Assert.That(mockDisplay.status, Is.EqualTo("charging"));
     }
@@ -58,7 +68,7 @@ public class TestChargeController
         _uut.Connect();
         _uut.StartCharge();
         mockUSB.setOvercharge();
-        System.Threading.Thread.Sleep(500);
+        System.Threading.Thread.Sleep(300);
 
         Assert.That(mockDisplay.status, Is.EqualTo("overcharge"));
     }
@@ -69,7 +79,7 @@ public class TestChargeController
         _uut.Connect();
         _uut.StartCharge();
         mockUSB.setChargeDone();
-        System.Threading.Thread.Sleep(500);
+        System.Threading.Thread.Sleep(300);
 
         Assert.That(mockDisplay.status, Is.EqualTo("charging complete"));
     }
@@ -81,7 +91,7 @@ public class TestChargeController
         _uut.Connect();
         _uut.StartCharge();
         mockUSB.CurrentValue = 5.1;
-        System.Threading.Thread.Sleep(500);
+        System.Threading.Thread.Sleep(300);
 
         Assert.That(mockDisplay.status, Is.EqualTo("charging"));
     }
@@ -92,7 +102,7 @@ public class TestChargeController
         _uut.Connect();
         _uut.StartCharge();
         mockUSB.CurrentValue = 0;
-        System.Threading.Thread.Sleep(500);
+        System.Threading.Thread.Sleep(300);
 
         Assert.That(mockDisplay.status, Is.EqualTo(""));
     }
@@ -102,7 +112,7 @@ public class TestChargeController
     {
         _uut.Connect();
         _uut.StartCharge();
-        System.Threading.Thread.Sleep(500);
+        System.Threading.Thread.Sleep(300);
 
         _uut.StopCharge();
         Assert.That(mockUSB._charging, Is.EqualTo(false));

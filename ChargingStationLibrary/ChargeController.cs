@@ -1,4 +1,5 @@
 ﻿using UsbSimulator;
+using System.Timers;
 
 
 namespace ChargingStationLibrary
@@ -10,19 +11,32 @@ namespace ChargingStationLibrary
         private IDisplay _display;
 
         private const int TimeTickerInterval = 250;
+        private System.Timers.Timer _timer;
 
         public bool IsConnected { get; private set; } = false;
+
+        public event EventHandler<ChargerConnectEvent> ConnectionStatusEvent;
 
         public ChargeController(IUsbCharger usbCharger, IDisplay display)
         {
             _usbCharger = usbCharger;
             _display = display;
             _usbCharger.CurrentValueEvent += OnCurrentChanged;
-            
+
+            _timer = new System.Timers.Timer();
+            _timer.Enabled = false;
+            _timer.Interval = TimeTickerInterval;
+            _timer.Elapsed += TimerOnElapsed;
+
+            _timer.Start();
+
         }
 
-        public event EventHandler<ChargerConnectEvent> ConnectionStatusEvent;
-
+        
+        private void TimerOnElapsed(object sender, ElapsedEventArgs e)
+        {
+            OnConnectionChange();
+        }
 
         public void Connect()
         {
@@ -45,6 +59,7 @@ namespace ChargingStationLibrary
             if (IsConnected)
             {
                 _usbCharger.StartCharge();
+                _timer.Stop(); //no need to check if phone is connected if door is locked, and phone is charging
             }
 
         }
@@ -52,6 +67,7 @@ namespace ChargingStationLibrary
         public void StopCharge()
         {
             _usbCharger.StopCharge();
+            _timer.Start(); //start checking if phone is removed
         }
 
 
@@ -76,6 +92,11 @@ namespace ChargingStationLibrary
                 _display.DisplayContent("");
             }
 
+        }
+
+        private void OnConnectionChange()
+        {
+            ConnectionStatusEvent?.Invoke(this, new ChargerConnectEvent() { ChargerIsConnected = this.IsConnected });
         }
 
     }
