@@ -4550,19 +4550,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Yevhen\\.nuget\\packages\\": {}
+    "C:\\Users\\UniquesKernel\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yevhen\\Documents\\Software-technology\\Sem4\\SoftwareTest\\Software_Test_Hand_Ins\\ChargingStation\\ChargingStationTest\\ChargingStationTest.csproj",
+      "projectUniqueName": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStationTest\\ChargingStationTest.csproj",
       "projectName": "ChargingStationTest",
-      "projectPath": "C:\\Users\\Yevhen\\Documents\\Software-technology\\Sem4\\SoftwareTest\\Software_Test_Hand_Ins\\ChargingStation\\ChargingStationTest\\ChargingStationTest.csproj",
-      "packagesPath": "C:\\Users\\Yevhen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yevhen\\Documents\\Software-technology\\Sem4\\SoftwareTest\\Software_Test_Hand_Ins\\ChargingStation\\ChargingStationTest\\obj\\",
+      "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStationTest\\ChargingStationTest.csproj",
+      "packagesPath": "C:\\Users\\UniquesKernel\\.nuget\\packages\\",
+      "outputPath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStationTest\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Yevhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\UniquesKernel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4576,8 +4581,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Yevhen\\Documents\\Software-technology\\Sem4\\SoftwareTest\\Software_Test_Hand_Ins\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj": {
-              "projectPath": "C:\\Users\\Yevhen\\Documents\\Software-technology\\Sem4\\SoftwareTest\\Software_Test_Hand_Ins\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj"
+            "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj": {
+              "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\Software-Test\\ChargingStation\\ChargingStationLibrary\\ChargingStationLibrary.csproj"
             }
           }
         }
@@ -4638,7 +4643,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
