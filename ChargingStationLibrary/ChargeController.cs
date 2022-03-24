@@ -15,7 +15,6 @@ namespace ChargingStationLibrary
         private System.Timers.Timer _timer;
 
         public bool IsConnected { get; private set; } = false;
-        public bool OldConnectStatus { get; private set; }
 
         public event EventHandler<ChargerConnectEvent> ConnectionStatusEvent;
 
