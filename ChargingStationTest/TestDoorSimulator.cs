@@ -53,6 +53,7 @@ public class TestDoorSimulator
   [Test]
   public void DoorCanBeClosed()
   {
+    _uut.SimulateOpenDoor();
     _uut.SimulateClosedDoor();
     Assert.That(_uut.IsOpen, Is.False);
   }
