@@ -1,3 +1,0 @@
-\contentsline {section}{\numberline {1}Charging Station Design}{3}{section.1}%
-\contentsline {section}{\numberline {2}Charging Station Design}{3}{section.2}%
-\contentsline {section}{\numberline {3}Design Reflection}{4}{section.3}%
