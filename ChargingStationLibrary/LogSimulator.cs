@@ -8,9 +8,9 @@ public class LogSimulator : ILog
 
   public void Log(string message)
   {
-    //var writer = File.AppendText(_filename);
-    //writer.WriteLine(DateTime.Now + " : " + message);
-
+    var writer = File.AppendText(_filename);
+    writer.WriteLine(DateTime.Now + " : " + message);
+    writer.Close();
   }
 
 }
