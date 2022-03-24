@@ -50,7 +50,33 @@ namespace ChargingStationTest
 
             Assert.That(_uut._doorState, Is.EqualTo(StationControl.DoorState.closed));
             _display.Received(1).DisplayMessage("Indlæs Rfid");
-
         }
+
+        [Test]
+        public void Station_Connect_To_Charger()
+        {
+            _door.DoorChanged += Raise.EventWith(new DoorEventArgs() { DoorIsOpen = true });
+
+            _chargeController.ConnectionStatusEvent += Raise.EventWith(new ChargerConnectEvent() { ChargerIsConnected = true });
+
+            Assert.That(_uut._connectionStatus, Is.EqualTo(StationControl.ChargerConnectionState.Connected));
+
+            _display.Received(1).DisplayMessage("Charger Connected!");
+        }
+
+        [Test]
+        public void Station_Disconnect_From_Charger()
+        {
+            _door.DoorChanged += Raise.EventWith(new DoorEventArgs() { DoorIsOpen = true });
+
+            _chargeController.ConnectionStatusEvent += Raise.EventWith(new ChargerConnectEvent() { ChargerIsConnected = true });
+
+            _chargeController.ConnectionStatusEvent += Raise.EventWith(new ChargerConnectEvent() { ChargerIsConnected = false });
+
+            Assert.That(_uut._connectionStatus, Is.EqualTo(StationControl.ChargerConnectionState.Disconnected));
+
+            _display.Received(1).DisplayMessage("Charger Disconnected!");
+        }
+
     }
 }
