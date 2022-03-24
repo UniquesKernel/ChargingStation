@@ -62,6 +62,7 @@ namespace ChargingStationLibrary
             {
                 _usbCharger.StartCharge();
                 _timer.Stop(); //no need to check if phone is connected if door is locked, and phone is charging
+                _display.DisplayChargerStatus("Charging");
             }
 
         }
@@ -70,6 +71,7 @@ namespace ChargingStationLibrary
         {
             _usbCharger.StopCharge();
             _timer.Start(); //start checking if phone is removed
+            _display.DisplayChargerStatus("Charging Stopped");
         }
 
 
@@ -83,7 +85,7 @@ namespace ChargingStationLibrary
             }
             else if (e.Current <= 500 && e.Current > 5)
             {
-                _display.DisplayChargerStatus("charging");
+                
             }
             else if (e.Current <= 5 && e.Current > 0)
             {

@@ -15,11 +15,19 @@ namespace ChargingStationLibrary;
 
           StationControl stationControl = new StationControl(chargeController, door, reader, log, display);
 
-            bool finish = false;
+         /* Indtastnings muligheder:
+          * E = Exit,
+          * O = Open Door,
+          * T = Connect Phone,
+          * F = Disconnect Phone,
+          * C = Close Door,
+          * R = Input RFID,
+          */
+
+          bool finish = false;
             do
             {
-                string input;
-                display.DisplayMessage("Indtast E, O, T, F, C, R: ");
+                string input;      
                 input = Console.ReadLine();
                 if (string.IsNullOrEmpty(input)) continue;
 

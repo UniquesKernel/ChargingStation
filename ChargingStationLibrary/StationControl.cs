@@ -4,15 +4,26 @@ namespace ChargingStationLibrary
     public class StationControl
     {
         // Enum med tilstande ("states") svarende til tilstandsdiagrammet for klassen
-        private enum LadeskabState
+        private enum ChargingStatitionState
         {
             Available,
-            Locked,
-            DoorOpen
+            Occupied
         };
+        private enum ChargerConnectionState
+        {
+            Connected,
+            Disconnected
+        };
+        private enum DoorState
+        {
+            open,
+            closed
+        }
 
         // Her mangler flere member variable
-        private LadeskabState _state;
+        private ChargingStatitionState _stationState;
+        private ChargerConnectionState _connectionStatus;
+        private DoorState _doorState;
         private IChargeController _charger;
         private int _oldId;
         private IDoor _door;
@@ -21,7 +32,7 @@ namespace ChargingStationLibrary
         private IDisplay _display;
 
         private string logFile = "logfile.txt"; // Navnet på systemets log-fil
-        private bool oldDoorStatus;
+
         public StationControl(
           IChargeController charger,
           IDoor door,
@@ -35,9 +46,11 @@ namespace ChargingStationLibrary
           _rfidReader = rfidReader;
           _log = log;
           _display = display;
+          _doorState = DoorState.closed;
 
           _rfidReader.RfidDetected += RfidDetected;
           _door.DoorChanged += OnDoorStatusChange;
+          _charger.ConnectionStatusEvent += OnConnectionChange;
 
         }
 
@@ -46,9 +59,9 @@ namespace ChargingStationLibrary
         {
           int id = e.Rfid;
 
-            switch (_state)
+            switch (_stationState)
             {
-                case LadeskabState.Available:
+                case ChargingStatitionState.Available:
                     // Check for ladeforbindelse
                     if (_charger.IsConnected)
                     {
@@ -58,7 +71,7 @@ namespace ChargingStationLibrary
                         _log.Log($": Skab låst med RFID: {id}");
 
                         _display.DisplayMessage("Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op.");
-                        _state = LadeskabState.Locked;
+                        _stationState = ChargingStatitionState.Occupied;
                     }
                     else
                     {
@@ -67,11 +80,7 @@ namespace ChargingStationLibrary
 
                     break;
 
-                case LadeskabState.DoorOpen:
-                    // Ignore
-                    break;
-
-                case LadeskabState.Locked:
+                case ChargingStatitionState.Occupied:
                     // Check for correct ID
                     if (id == _oldId)
                     {
@@ -81,7 +90,7 @@ namespace ChargingStationLibrary
                         _log.Log($": Skab låst op med RFID: {id}");
                        
                         _display.DisplayMessage("Tag din telefon ud af skabet og luk døren");
-                        _state = LadeskabState.Available;
+                        _stationState = ChargingStatitionState.Available;
                     }
                     else
                     {
@@ -94,15 +103,30 @@ namespace ChargingStationLibrary
 
         private void OnDoorStatusChange(object sender, DoorEventArgs e)
         {
-          if (e.DoorIsOpen != oldDoorStatus && e.DoorIsOpen == true)
+          if (_doorState == DoorState.closed && e.DoorIsOpen == true)
           {
             _display.DisplayMessage("Tilslut Telefon");
-            oldDoorStatus = true;
+            _doorState = DoorState.open;
           }
-          else if (e.DoorIsOpen != oldDoorStatus && e.DoorIsOpen == false)
+          else if (_doorState == DoorState.open && e.DoorIsOpen == false && _connectionStatus == ChargerConnectionState.Connected)
           {
             _display.DisplayMessage("Indlæs Rfid");
+            _doorState = DoorState.closed;
           }
+        }
+
+        private void OnConnectionChange(object sender, ChargerConnectEvent e )
+        {
+            if(e.ChargerIsConnected == true && _connectionStatus == ChargerConnectionState.Disconnected)
+            {
+                _display.DisplayMessage("Charger Connected!");
+                _connectionStatus = ChargerConnectionState.Connected;
+            }
+            if(e.ChargerIsConnected == false && _connectionStatus == ChargerConnectionState.Connected)
+            {
+                _display.DisplayMessage("Charger Disconnected!");
+                _connectionStatus = ChargerConnectionState.Disconnected;
+            }
         }
     }
 }

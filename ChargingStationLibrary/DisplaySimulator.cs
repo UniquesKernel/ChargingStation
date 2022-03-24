@@ -38,11 +38,11 @@ namespace ChargingStationLibrary
             {
                 Console.Clear();
 
-                Console.WriteLine("***************************************");
-                Console.WriteLine("Charging Status: {1}", chargingStatus);
-                Console.WriteLine("---------------------------------------");
-                Console.WriteLine("{1}", messageToUser);
-                Console.WriteLine("***************************************");
+                Console.WriteLine("***************************************\n");
+                Console.WriteLine("Charging Status: {0}\n", chargingStatus);
+                Console.WriteLine("---------------------------------------\n");
+                Console.WriteLine("{0}\n", messageToUser);
+                Console.WriteLine("***************************************\n");
             }
             catch
             {
