@@ -19,9 +19,6 @@ namespace ChargingStationTest
         private IChargeController _chargeController;
         private ILog _log;
 
-        private RfidEventArgs _RfidDetectedEvent;
-        private DoorEventArgs _DoorDetectedEvent;
-
         [SetUp]
         public void Setup()
         {
@@ -32,20 +29,6 @@ namespace ChargingStationTest
             _log = Substitute.For<ILog>();
 
             _uut = new StationControl(_chargeController, _door, _rfidReader, _log, _display);
-
-            _RfidDetectedEvent = null;
-            _DoorDetectedEvent = null;
-
-            _rfidReader.RfidDetected +=
-                (o, args) =>
-                {
-                    _RfidDetectedEvent = args;
-                };
-            _door.DoorChanged +=
-                (o, args) =>
-                {
-                    _DoorDetectedEvent = args;
-                };
         }
 
 
