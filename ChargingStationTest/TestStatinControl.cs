@@ -63,18 +63,27 @@ namespace ChargingStationTest
             _display.Received(1).DisplayMessage("Charger Connected!");
         }
 
-        [Test]
-        public void Station_Disconnect_From_Charger()
+        [TestCase(true)]
+        [TestCase(false)]
+        public void Station_Disconnect_From_Charger(bool withDoors)
         {
             _door.DoorChanged += Raise.EventWith(new DoorEventArgs() { DoorIsOpen = true });
 
             _chargeController.ConnectionStatusEvent += Raise.EventWith(new ChargerConnectEvent() { ChargerIsConnected = true });
+
+            if (withDoors)
+            { 
+                _door.DoorChanged += Raise.EventWith(new DoorEventArgs() { DoorIsOpen = false });
+
+                _door.DoorChanged += Raise.EventWith(new DoorEventArgs() { DoorIsOpen = true });
+            }
 
             _chargeController.ConnectionStatusEvent += Raise.EventWith(new ChargerConnectEvent() { ChargerIsConnected = false });
 
             Assert.That(_uut._connectionStatus, Is.EqualTo(StationControl.ChargerConnectionState.Disconnected));
             _display.Received(1).DisplayMessage("Charger Disconnected!");
         }
+
 
     }
 }
