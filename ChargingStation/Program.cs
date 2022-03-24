@@ -38,19 +38,34 @@ namespace ChargingStationLibrary;
                         break;
 
                     case 'O':
-                        door.OpenDoor();
+                        if(!door.IsOpen && !door.IsLocked)
+                        {
+                            door.OpenDoor();
+                        }
+                        
                         break;
 
                     case 'T':
-                      chargeController.Connect();
+                      if(!chargeController.IsConnected && door.IsOpen)
+                      {
+                            chargeController.Connect();
+                      }
+                      
                       break;
 
                     case 'F':
-                      chargeController.Disconnect();
+                        if (chargeController.IsConnected && door.IsOpen)
+                        {
+                            chargeController.Disconnect();
+                        }
+                        
                       break;
 
                     case 'C':
-                        door.CloseDoor();
+                        if(door.IsOpen)
+                        {
+                            door.CloseDoor();
+                        }
                         break;
 
                     case 'R':

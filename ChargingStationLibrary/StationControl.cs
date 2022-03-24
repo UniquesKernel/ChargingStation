@@ -49,8 +49,10 @@ namespace ChargingStationLibrary
           _display = display;
           _stationState = ChargingStatitionState.Available;
           _doorState = DoorState.closed;
+          _connectionStatus = ChargerConnectionState.Disconnected;
 
-          _rfidReader.RfidDetected += RfidDetected;
+
+            _rfidReader.RfidDetected += RfidDetected;
           _door.DoorChanged += OnDoorStatusChange;
           _charger.ConnectionStatusEvent += OnConnectionChange;
 
@@ -67,13 +69,20 @@ namespace ChargingStationLibrary
                     // Check for ladeforbindelse
                     if (_charger.IsConnected)
                     {
-                        _door.Lock();
-                        _charger.StartCharge();
-                        _oldId = id;
-                        _log.Log($": Skab låst med RFID: {id}");
+                        if (_doorState == DoorState.closed)
+                        {
+                            _door.Lock();
+                            _charger.StartCharge();
+                            _oldId = id;
+                            _log.Log($": Skab låst med RFID: {id}");
 
-                        _display.DisplayMessage("Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op.");
-                        _stationState = ChargingStatitionState.Locked;
+                            _display.DisplayMessage("Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op.");
+                            _stationState = ChargingStatitionState.Locked;
+                        }
+                        else
+                        {
+                            _display.DisplayMessage("Luk døren og prøv igen");
+                        }
                     }
                     else
                     {
@@ -111,7 +120,7 @@ namespace ChargingStationLibrary
             _doorState = DoorState.open;
             
           }
-          else if (_doorState == DoorState.open && e.DoorIsOpen == false && _connectionStatus == ChargerConnectionState.Connected)
+          else if (_doorState == DoorState.open && e.DoorIsOpen == false)
           {
             _display.DisplayMessage("Indlæs Rfid");
             _doorState = DoorState.closed;
