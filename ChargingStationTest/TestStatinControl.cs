@@ -60,7 +60,6 @@ namespace ChargingStationTest
             _chargeController.ConnectionStatusEvent += Raise.EventWith(new ChargerConnectEvent() { ChargerIsConnected = true });
 
             Assert.That(_uut._connectionStatus, Is.EqualTo(StationControl.ChargerConnectionState.Connected));
-
             _display.Received(1).DisplayMessage("Charger Connected!");
         }
 
@@ -74,7 +73,6 @@ namespace ChargingStationTest
             _chargeController.ConnectionStatusEvent += Raise.EventWith(new ChargerConnectEvent() { ChargerIsConnected = false });
 
             Assert.That(_uut._connectionStatus, Is.EqualTo(StationControl.ChargerConnectionState.Disconnected));
-
             _display.Received(1).DisplayMessage("Charger Disconnected!");
         }
 
