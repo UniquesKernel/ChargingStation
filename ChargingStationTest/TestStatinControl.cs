@@ -98,5 +98,21 @@ namespace ChargingStationTest
             _door.Received(1).Lock();
             _chargeController.Received(1).StartCharge();
         }
+
+        [Test]
+        public void Station_RFID_Door_Open()
+        {
+            _chargeController.ConnectionStatusEvent += Raise.EventWith(new ChargerConnectEvent() { ChargerIsConnected = true });
+            _door.DoorChanged += Raise.EventWith(new DoorEventArgs() { DoorIsOpen = true });
+            _uut._stationState = StationControl.ChargingStatitionState.Available;
+
+            _rfidReader.RfidDetected += Raise.EventWith(new RfidEventArgs() { Rfid = 9875 });
+
+           
+            _display.Received(1).DisplayMessage("Luk døren og prøv igen");
+
+        }
+
+       
     }
 }
