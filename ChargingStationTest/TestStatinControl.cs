@@ -143,5 +143,20 @@ namespace ChargingStationTest
             Assert.That(_uut._stationState, Is.EqualTo(StationControl.ChargingStatitionState.Available));
 
         }
+        [Test]
+        public void Station_Locked_RFID_Incorrect()
+        {
+            _chargeController.ConnectionStatusEvent += Raise.EventWith(new ChargerConnectEvent() { ChargerIsConnected = true });
+            _door.DoorChanged += Raise.EventWith(new DoorEventArgs() { DoorIsOpen = false });
+
+            _rfidReader.RfidDetected += Raise.EventWith(new RfidEventArgs() { Rfid = 9875 });
+
+            Assert.That(_uut._stationState, Is.EqualTo(StationControl.ChargingStatitionState.Locked));
+
+            _rfidReader.RfidDetected += Raise.EventWith(new RfidEventArgs() { Rfid = 9854 });
+
+            _display.Received(1).DisplayMessage("Forkert RFID tag");
+
+        }
     }
 }
