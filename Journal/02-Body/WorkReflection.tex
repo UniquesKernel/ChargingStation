@@ -5,6 +5,15 @@ The \textit{stationControl} module was left out, as this module is at the centre
 
 This approach of divide and conquer, with an occational "concentration of force" has worked well for the group, allowing us to work as suited the individual best, but also taking advantage of the small group size to be able to work "all hands on deck" on the key elements.\\
 
+In our testing approach we tried different test techniques to see what worked for us. 
+First when using mocks were not feasable we used tradition unit testing to test components that didnt rely on other components.
+when using mocks we first wrote mock classes but found this cumbersome and soon switched to using NSubstitute; a framework for 
+doing mock testing. \\
+
+One component the Log class lent itself poorly for testing as the system did not require a way of retrieving the log. This made
+excruciatingly painful to test and so the test was left out.
+After all there is no reason to test something that can't be retrieved anyway.
+
 The jenkins server felt cumbersom, as threr was very little integreation to test, as most, if not all, tests were tests that we could do locally. It did, however, catch an error that prevented building the project almost imidiately. In other words, it worked as it should, but the limmited scope of the assignment didnt allow jenkins to shine as mutch as it could have.\\
 
 Using a shared repository is by now standard opperating procedure for the group, and it works quite well. We all instinctively know not to work on files that other group members are using, and have enought knowledge of git to handle the merge conflicts that occationaly arise anyway. It works well with the divide and conquer approach that we used (and that was encouraged, not to say demanded, by the assignment), but does make it slightly more troublesome to quickly hand your work over to someone else.
