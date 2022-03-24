@@ -201,8 +201,10 @@ public class usbMock : IUsbCharger
 public class displayMock : IDisplay
 {
     public string status { get; private set; }
-    public void DisplayContent(string inputText)
+    public void DisplayChargerStatus(string inputText)
     {
         status = inputText;
     }
+    public void DisplayMessage(string inputText) { }
+    public void UpdateDisplay() { }
 }

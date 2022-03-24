@@ -1,7 +1,10 @@
 ﻿namespace ChargingStationLibrary
 {
+
     public interface IDisplay
     {
-        public void DisplayContent(string inputText);
+        public void DisplayChargerStatus(string inputText);
+        public void DisplayMessage(string inputText);
+        public void UpdateDisplay();
     }
 }

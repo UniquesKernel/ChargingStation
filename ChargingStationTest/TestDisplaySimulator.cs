@@ -14,21 +14,22 @@ namespace ChargingStationTest
         public void Setup()
         {
             _uut = new DisplaySimulator();
-            _consoleText = null;
         }
 
-        [TestCase("TestText")]
-        public void Validate_Displayed_Text(string testText)
+        [TestCase("Message")]
+        public void Validate_Displayed_Messsage(string testText)
         {
-          _uut!.DisplayContent(testText);
+            _uut.DisplayMessage(testText);
 
-            Assert.That(_consoleText, Is.EqualTo(_uut.FrameBuffer));
+            Assert.That(testText, Is.EqualTo(_uut.messageToUser));
         }
 
-        [Test]
-        public void Validate_Start_Message()
+        [TestCase("ChargingStatus")]
+        public void Validate_Displayed_ChargingStatus(string testText)
         {
-            Assert.That(_uut.FrameBuffer, Is.EqualTo(_uut.WelcomeMessage));
+            _uut.DisplayChargerStatus(testText);
+
+            Assert.That(testText , Is.EqualTo(_uut.chargingStatus));
         }
     }
 }

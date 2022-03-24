@@ -57,12 +57,12 @@ namespace ChargingStationLibrary
                         _oldId = id;
                         _log.Log($": Skab låst med RFID: {id}");
 
-                        _display.DisplayContent("Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op.");
+                        _display.DisplayMessage("Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op.");
                         _state = LadeskabState.Locked;
                     }
                     else
                     {
-                        _display.DisplayContent("Din telefon er ikke ordentlig tilsluttet. Prøv igen.");
+                        _display.DisplayMessage("Din telefon er ikke ordentlig tilsluttet. Prøv igen.");
                     }
 
                     break;
@@ -80,12 +80,12 @@ namespace ChargingStationLibrary
                         
                         _log.Log($": Skab låst op med RFID: {id}");
                        
-                        _display.DisplayContent("Tag din telefon ud af skabet og luk døren");
+                        _display.DisplayMessage("Tag din telefon ud af skabet og luk døren");
                         _state = LadeskabState.Available;
                     }
                     else
                     {
-                        _display.DisplayContent("Forkert RFID tag");
+                        _display.DisplayMessage("Forkert RFID tag");
                     }
 
                     break;
@@ -96,12 +96,12 @@ namespace ChargingStationLibrary
         {
           if (e.DoorIsOpen != oldDoorStatus && e.DoorIsOpen == true)
           {
-            _display.DisplayContent("Tilslut Telefon");
+            _display.DisplayMessage("Tilslut Telefon");
             oldDoorStatus = true;
           }
           else if (e.DoorIsOpen != oldDoorStatus && e.DoorIsOpen == false)
           {
-            _display.DisplayContent("Indlæs Rfid");
+            _display.DisplayMessage("Indlæs Rfid");
           }
         }
     }

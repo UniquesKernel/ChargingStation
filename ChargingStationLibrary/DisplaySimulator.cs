@@ -4,39 +4,50 @@ using System.Timers;
 
 namespace ChargingStationLibrary
 {
-    public class DisplaySimulator :IDisplay
+    public class DisplaySimulator : IDisplay
     {
-        private string _frameBuffer;
-        public string FrameBuffer { get; set; }
+        public string welcomeMessage = "Welcome to Charger Station!";
 
-        private const int TimeTickerInterval = 500;
+        public string messageToUser;
 
-        private string _welcomeMessage = "Welcome to Charger Station!";
-        public string WelcomeMessage { get; }
-
+        public string chargingStatus;
 
         public DisplaySimulator()
         {
-            _timer = new System.Timers.Timer();
-            _timer.Enabled = true;
-            _timer.Interval = TimeTickerInterval;
-            _timer.Elapsed += TimerOnElapsed;
-            _timer.Start();
-            _frameBuffer = _welcomeMessage;
-            Console.WriteLine(_frameBuffer);
+            messageToUser = welcomeMessage;
+            chargingStatus = "";
+            UpdateDisplay();    
+
         }
 
-        private System.Timers.Timer _timer;
-
-        public void DisplayContent(string inputText)
+        public void DisplayChargerStatus(string inputText)
         {
-            _frameBuffer = inputText; 
+            chargingStatus = inputText;
+            UpdateDisplay();
         }
 
-        private void TimerOnElapsed(object? sender, ElapsedEventArgs e)
+        public void DisplayMessage(string inputText)
         {
-            Console.Clear();
-            Console.WriteLine(_frameBuffer);
+            messageToUser = inputText;
+            UpdateDisplay();
+        }
+
+        public void UpdateDisplay()
+        {
+            try
+            {
+                Console.Clear();
+
+                Console.WriteLine("***************************************");
+                Console.WriteLine("Charging Status: {1}", chargingStatus);
+                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("{1}", messageToUser);
+                Console.WriteLine("***************************************");
+            }
+            catch
+            {
+
+            }
         }
     }
 }
