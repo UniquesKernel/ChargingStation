@@ -48,14 +48,26 @@ namespace ChargingStationTest
                 };
         }
 
-        
-        [TestCase(true)]
-        public void Station_Door_From_Closed_to_Open_Event(bool doorOpen)
+
+        [Test]
+        public void Station_Door_From_Closed_to_Open_Event()
         {
             //Tell the substitute to raise the event with EventArgs:
-            _door.DoorChanged += Raise.EventWith(new DoorEventArgs() { DoorIsOpen = doorOpen});
+            _door.DoorChanged += Raise.EventWith(new DoorEventArgs() { DoorIsOpen = true });
 
             Assert.That(_uut._doorState, Is.EqualTo(StationControl.DoorState.open));
+            _display.Received(1).DisplayMessage("Tilslut Telefon");
+        }
+
+        [Test]
+        public void Station_Door_From_Open_to_Closed_Event()
+        {
+            _door.DoorChanged += Raise.EventWith(new DoorEventArgs() { DoorIsOpen = true });
+            _door.DoorChanged += Raise.EventWith(new DoorEventArgs() { DoorIsOpen = false });
+
+            Assert.That(_uut._doorState, Is.EqualTo(StationControl.DoorState.closed));
+            _display.Received(1).DisplayMessage("Indlæs Rfid");
+
         }
     }
 }
