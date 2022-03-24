@@ -1,7 +1,0 @@
-\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
-\contentsline {section}{\numberline {2}Charging Station Design}{4}{section.2}%
-\contentsline {section}{\numberline {3}Design Reflection}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}SOLID}{7}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Events}{7}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Conclusion}{7}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Work Distribution Reflection}{8}{section.4}%
