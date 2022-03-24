@@ -1,3 +1,48 @@
 \section{Design Reflection}
-The use of interfaces in our 
 
+The major component in design philosophy for the project have been to 
+allow for a low coupled and testable design. In extension of that
+the use of events in the observer pattern means that it has 
+been unnessesary to use threads to handle multiple events.
+
+\subsection{SOLID}
+
+Take cognizance of the SOLID principles. We have divvied up the respondsible 
+of each part of the ChargingStation system into seperate classes. 
+
+This seperation of responsibility between the class makes it effortless to change 
+one part of the system without impacting or breaking the other functionalities.
+It also ensures that each class can be tested seperately. 
+
+All components of the system is assembled with the use of Interfaces to ophold the
+open and close principles. It makes it painless to extend the functionalities of
+the system without having to change existing implementaions.
+
+The principles of Interface segregation and dependency inversion are used extensively
+to ensure that Station controller (a high level module) in no way depends on specific
+implementations of its components but rather interface abstractions. 
+
+
+\subsection{Events}
+
+To handle event, we implemented the observer pattern to handle any changes in values
+either from user actions or through time based events such a regular variable updates
+with regular time intervals.
+
+While such things could have been handled with the use of threads, we chose to use
+event driven programming instead as implementing threaded system can be more complex
+and harder to test.
+
+\subsection{Conclusion}
+
+While the SOLID principles makes everything loosely coupled, it does mean a marginally more
+complex codebase as the solution increases in scope. It is however, the better solution
+for the reasons mentioned above, making it lossely coupled and easilier testable.
+
+The use of event driven programming rather than threaded programming follow the same 
+argument where testability and simplicity was chosen of complexity.
+
+In conclusion, due to these design considerations it means that mock classes could be 
+used to ensure a high test coverage where each aspect of a class is regiously tested.
+
+\newpage
