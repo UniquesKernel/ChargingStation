@@ -78,7 +78,7 @@ public class DoorSimulator : IDoor
 
   private void OnDoorChanged()
   {
-    DoorChanged?.Invoke(this, new DoorEventArgs() {DoorIsOpen = IsOpen});
+    DoorChanged.Invoke(this, new DoorEventArgs() {DoorIsOpen = IsOpen});
   }
 
   #endregion

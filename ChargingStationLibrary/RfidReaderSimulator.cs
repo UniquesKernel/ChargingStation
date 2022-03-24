@@ -20,7 +20,7 @@ namespace ChargingStationLibrary
 
         private void OnRfidDetected()
         {
-            RfidDetected?.Invoke(this, new RfidEventArgs() { Rfid = this._newRfid });
+            RfidDetected.Invoke(this, new RfidEventArgs() { Rfid = this._newRfid });
         }
     }
 }
