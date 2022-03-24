@@ -27,6 +27,7 @@ namespace ChargingStationLibrary
         public DoorState _doorState;
         private IChargeController _charger;
         private int _oldId;
+        public int OldId { get { return _oldId; } }
         private IDoor _door;
         private IRfidReader _rfidReader;
         private ILog _log;
@@ -67,7 +68,7 @@ namespace ChargingStationLibrary
             {
                 case ChargingStatitionState.Available:
                     // Check for ladeforbindelse
-                    if (_charger.IsConnected)
+                    if (_connectionStatus == ChargerConnectionState.Connected)
                     {
                         if (_doorState == DoorState.closed)
                         {

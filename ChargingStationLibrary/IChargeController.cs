@@ -10,8 +10,6 @@ public interface IChargeController
     void Connect();
     void Disconnect();
   
-    bool IsConnected { get; }
-
     void StartCharge();
 
     void StopCharge();
