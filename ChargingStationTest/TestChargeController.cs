@@ -107,6 +107,17 @@ public class TestChargeController
     }
 
     [Test]
+    public void testChargingMaxAllowed()
+    {
+        _uut.Connect();
+        _uut.StartCharge();
+        mockUSB.CurrentValue = 500;
+        System.Threading.Thread.Sleep(300);
+
+        Assert.That(mockDisplay.status, Is.EqualTo("Charging"));
+    }
+
+    [Test]
     public void testNoConection()
     {
         _uut.Connect();
