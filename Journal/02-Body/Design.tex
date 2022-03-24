@@ -2,6 +2,8 @@
 
 Our design relies heavily on interfaces to allow testing the system through hardware simulations. It is thus easy to create a piece of code that sends the same signals to the system as the physical hardware inmplementation would, allowing for testing of the individual units before implementation. This is taken further, as the internal components of the system ( \textit{stationControl} and \textit{ChargeController}) interacts through an interface, allowing the \textit{chargeControlle} to be replaced for upgrades or testing of \textit{stationControl}.
 
+\vspace{3em}
+
 The design of the charging station is displayed in \autoref{fig:class-diagram}. Central to the system is the \textit{stationControl} class, which handles all interaction with the user, through various interfaces (display, door and rfid detector). It also interacts with the \textit{chargeController} through another interface. The \textit{chargeController} meanwhile interfaces with the USB charger, cobntrolling it, and also displays charging status on the display through the display interface. 
 
 \begin{figure}[h]
