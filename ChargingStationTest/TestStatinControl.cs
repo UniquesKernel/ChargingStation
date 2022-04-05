@@ -100,6 +100,43 @@ namespace ChargingStationTest
         }
 
         [Test]
+        public void Station_Once_RFID_Correct_Once_RFID_Wrong_Door_Closed()
+        {
+            _chargeController.ConnectionStatusEvent += Raise.EventWith(new ChargerConnectEvent() { ChargerIsConnected = true });
+            _door.DoorChanged += Raise.EventWith(new DoorEventArgs() { DoorIsOpen = false });
+            _uut._stationState = StationControl.ChargingStatitionState.Available;
+
+            _rfidReader.RfidDetected += Raise.EventWith(new RfidEventArgs() { Rfid = 9875 });
+
+            _rfidReader.RfidDetected += Raise.EventWith(new RfidEventArgs() { Rfid = 2302 });
+
+            Assert.That(_uut.OldId, Is.EqualTo(9875));
+            _display.Received(1).DisplayMessage("Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op.");
+            _door.Received(1).Lock();
+            _chargeController.Received(1).StartCharge();
+            _display.Received(1).DisplayMessage("Forkert RFID tag");
+        }
+
+        [Test]
+        public void Station_DoubleRFID_Correct_Door_Closed()
+        {
+            _chargeController.ConnectionStatusEvent += Raise.EventWith(new ChargerConnectEvent() { ChargerIsConnected = true });
+            _door.DoorChanged += Raise.EventWith(new DoorEventArgs() { DoorIsOpen = false });
+            _uut._stationState = StationControl.ChargingStatitionState.Available;
+
+            _rfidReader.RfidDetected += Raise.EventWith(new RfidEventArgs() { Rfid = 9875 });
+
+            _rfidReader.RfidDetected += Raise.EventWith(new RfidEventArgs() { Rfid = 9875 });
+
+            Assert.That(_uut.OldId, Is.EqualTo(9875));
+            _display.Received(1).DisplayMessage("Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op.");
+            _door.Received(1).Lock();
+            _chargeController.Received(1).StartCharge();
+            _display.Received(1).DisplayMessage("Tag din telefon ud af skabet og luk døren");
+        }
+
+
+        [Test]
         public void Station_RFID_Door_Open()
         {
             _chargeController.ConnectionStatusEvent += Raise.EventWith(new ChargerConnectEvent() { ChargerIsConnected = true });
@@ -141,8 +178,8 @@ namespace ChargingStationTest
             _log.Received(1).RecordMessage($": Skab låst op med RFID: 9875");
             _display.Received(1).DisplayMessage("Tag din telefon ud af skabet og luk døren");
             Assert.That(_uut._stationState, Is.EqualTo(StationControl.ChargingStatitionState.Available));
-
         }
+
         [Test]
         public void Station_Locked_RFID_Incorrect()
         {
