@@ -53,7 +53,7 @@ namespace ChargingStationLibrary
           _connectionStatus = ChargerConnectionState.Disconnected;
 
 
-            _rfidReader.RfidDetected += RfidDetected;
+          _rfidReader.RfidDetected += RfidDetected;
           _door.DoorChanged += OnDoorStatusChange;
           _charger.ConnectionStatusEvent += OnConnectionChange;
 

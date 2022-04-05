@@ -1,4 +1,6 @@
+using System;
 using System.IO;
+using System.Runtime.CompilerServices;
 using NUnit.Framework;
 using ChargingStationLibrary;
 
@@ -47,5 +49,25 @@ namespace ChargingStationTest
       Assert.That(loggedMessage2, Is.EquivalentTo(messagesFromLogFile[1]));
     }
 
+    [Test]
+    public void LogSimulatorConstructorDoesNotOverwriteLogFileOnConstruction()
+    {
+      string loggedMessage1 = _uut.RecordMessage("this is the first test Message");
+
+      _uut = new LogSimulator();
+
+      string[] messagesFromLogFile = File.ReadAllLines(_uut.FilePath);
+
+
+      Assert.That(loggedMessage1, Is.EquivalentTo(messagesFromLogFile[0]));
+    }
+
+    [TearDown]
+    public void TearDown()
+    {
+      GC.Collect();
+      File.Delete(_uut.FilePath);
+
+    }
   }
 }

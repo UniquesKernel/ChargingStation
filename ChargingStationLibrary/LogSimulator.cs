@@ -15,9 +15,11 @@ public class LogSimulator : ILog
 
   private void CreateLogFile(string filepath)
   {
-    var file = File.Create(filepath);
-    file.Close();
-
+    if (!File.Exists(filepath))
+    {
+      var file = File.Create(filepath);
+      file.Close();
+    }
   }
   public string RecordMessage(string message)
   {
