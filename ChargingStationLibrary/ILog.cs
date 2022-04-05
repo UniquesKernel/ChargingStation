@@ -2,5 +2,5 @@
 
 public interface ILog
 {
-  void Log(string message);
+  string RecordMessage(string message);
 }

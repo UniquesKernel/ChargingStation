@@ -138,7 +138,7 @@ namespace ChargingStationTest
 
             _chargeController.Received(1).StopCharge();
             _door.Received(1).Unlock();
-            _log.Received(1).Log($": Skab låst op med RFID: 9875");
+            _log.Received(1).RecordMessage($": Skab låst op med RFID: 9875");
             _display.Received(1).DisplayMessage("Tag din telefon ud af skabet og luk døren");
             Assert.That(_uut._stationState, Is.EqualTo(StationControl.ChargingStatitionState.Available));
 

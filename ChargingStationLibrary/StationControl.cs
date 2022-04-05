@@ -75,7 +75,7 @@ namespace ChargingStationLibrary
                             _door.Lock();
                             _charger.StartCharge();
                             _oldId = id;
-                            _log.Log($": Skab låst med RFID: {id}");
+                            _log.RecordMessage($": Skab låst med RFID: {id}");
 
                             _display.DisplayMessage("Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op.");
                             _stationState = ChargingStatitionState.Locked;
@@ -99,7 +99,7 @@ namespace ChargingStationLibrary
                         _charger.StopCharge();
                         _door.Unlock();
                         
-                        _log.Log($": Skab låst op med RFID: {id}");
+                        _log.RecordMessage($": Skab låst op med RFID: {id}");
                        
                         _display.DisplayMessage("Tag din telefon ud af skabet og luk døren");
                         _stationState = ChargingStatitionState.Available;

@@ -5,12 +5,27 @@ namespace ChargingStationLibrary;
 public class LogSimulator : ILog
 {
   private readonly string _filename = "logFile.txt";
+  public string FilePath {get; private set;}
 
-  public void Log(string message)
+  public LogSimulator()
   {
-    var writer = File.AppendText(_filename);
-    writer.WriteLine(DateTime.Now + " : " + message);
-    writer.Close();
+    FilePath = Environment.CurrentDirectory + "\\" + _filename;
+    CreateLogFile(FilePath);
   }
 
+  private void CreateLogFile(string filepath)
+  {
+    var file = File.Create(filepath);
+    file.Close();
+
+  }
+  public string RecordMessage(string message)
+  {
+    var writer = File.AppendText(_filename);
+    string logMessage = DateTime.Now + " : " + message;
+    writer.WriteLine(logMessage);
+    writer.Close();
+
+    return logMessage;
+  }
 }
