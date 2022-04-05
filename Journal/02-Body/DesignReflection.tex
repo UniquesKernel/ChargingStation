@@ -33,6 +33,9 @@ While such things could have been handled with the use of threads, we chose to u
 event driven programming instead as implementing threaded system can be more complex
 and harder to test.
 
+It was noted upon further reflection that premature charging interruption could occur if the RFID tag event was fired very fast one after another, and if this was not the intention of the user. 
+One solution to this problem could be a timer for the event, disabling the event for some time or simply ignoring the event.  
+
 \subsection{Conclusion}
 
 While the SOLID principles makes everything loosely coupled, it does mean a marginally more
