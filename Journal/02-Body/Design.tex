@@ -26,3 +26,8 @@ This sequence is illustrated in \autoref{fig:seq-diagram}.
 \end{figure}
 
 \newpage
+
+\subsection{Test Design}
+To test the charge controller we used BVA and EP to test the boundary testcases above, on and below the maximum and minimum current values, as well as testing the connection threshold value. 
+We used the EP principle to equate the allowed values of the charger current.
+To test the event of RFID we used the ZOMBIE Many principle to simulate two correct RFID and one correct and one wrong RFID tag events. For the door event we did not use any additional test principle as the door operations and lock and unlock functions are expected to operate mechanically and fault in this systems will introduce testcases that are not a scope of this assignment. Display simulator test is a simple whitebox test, any attempt to test the consolewriteline method will move the focus of the assignment to begin testing Windows System Calls which we do not want to. This will reduce the coverage of the display simulator class but is acceptable.
