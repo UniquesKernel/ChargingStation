@@ -117,7 +117,7 @@ public class TestChargeController
         Assert.That(mockDisplay.status, Is.EqualTo("Charging"));
     }
 
-
+    //BVA test Case 
     [Test]
     public void testChargingMaxAllowed()
     {
@@ -129,6 +129,7 @@ public class TestChargeController
         Assert.That(mockDisplay.status, Is.EqualTo("Charging"));
     }
 
+    //BVA test Case 
     [Test]
     public void testChargingBelowMaxAllowed()
     {
@@ -140,6 +141,7 @@ public class TestChargeController
         Assert.That(mockDisplay.status, Is.EqualTo("Charging"));
     }
 
+    //BVA test Case 
     [Test]
     public void testChargingAboveMaxAllowed()
     {
