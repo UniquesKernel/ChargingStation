@@ -1,0 +1,35 @@
+\section{ResubmissionChanges}
+
+Below is listed the changes we have made to the report and code for resubmission.
+They cover further explanation of our design, adding a test for the log and expanding the tests of chargeControl
+
+One comment on our work was \emph{"ChargeControl dosen't show that it is charging when current (5$<$current=$>$500)"} and that BVA and EP was not used in testing ChargeControl.
+
+We agree that the testing did not do a complete BVA of ChargeControl. This has been fixed. We do, however, disagree that ChargeControl doesn't show charging when current is between 5 and 500. We do not send a "charging" message to the display, as this message has already been sent when the startCharge function was called, and there is therefore no point in sending the "charging" message again.
+
+We have of cource tested the behaviour (and as mentioned above, added more tests) 
+
+
+\textbf{Sections added:}
+
+1 . Test Design. 
+
+Added More text to:
+
+Reflections on RFID event firing double. 
+
+Code Added: 
+
+Added more BVA tests:
+
+testMinimumChargingCurrent()
+testAboveMinimumChargingCurrent()
+testBelowMinimumChargingCurrent()
+testChargingMaxAllowed()
+testChargingBelowMaxAllowed()
+testChargingAboveMaxAllowed()
+
+Added ZOMBIE MANY tests: 
+
+Station_Once_RFID_Correct_Once_RFID_Wrong_Door_Closed()
+Station_DoubleRFID_Correct_Door_Closed()
